@@ -3,42 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Julian Garcia | Portfolio</title>
+  <title>Julian Garcia | Home</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body data-page="home">
   <header class="site-header">
     <div class="logo">JG</div>
     <nav class="nav">
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        ☰
-      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
       <ul id="navMenu">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#resume" class="nav-link">Resume</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+        <li><a href="resume.html" class="nav-link" data-page="resume">Resume</a></li>
+        <li><a href="skills.html" class="nav-link" data-page="skills">Skills</a></li>
+        <li><a href="experience.html" class="nav-link" data-page="experience">Experience</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- HOME SECTION -->
-  <main>
-    <section id="home" class="section hero">
-      <div class="hero-content">
-        <div class="hero-text">
-          <p class="hero-tag">Information Science @ University of Arizona</p>
-          <h1>Hi, I'm <span>Julian Garcia</span>.</h1>
+  <main class="page">
+    <section class="card">
+      <div class="hero-grid">
+        <div>
+          <p class="hero-tag">Information Science • University of Arizona</p>
+          <h1 class="hero-heading">
+            Hi, I'm <span>Julian Garcia</span>.
+          </h1>
           <p class="hero-summary">
             I'm an Information Science student with a Business Administration minor, experienced in
-            software development, automation, and operations systems. I’m actively seeking a
-            <strong>full-time role starting Summer 2026</strong> where I can build reliable,
-            efficient solutions for real-world problems.
+            software development, automation, networking, and operations systems.
+            I'm actively seeking a <strong>full-time position starting Summer 2026</strong>
+            where I can help build reliable, efficient solutions to real-world problems.
           </p>
 
           <div class="hero-actions">
-            <a href="#experience" class="btn primary-btn">View Experience</a>
-            <a href="#resume" class="btn secondary-btn">View Resume</a>
+            <a href="experience.html" class="btn btn-primary">View Experience</a>
+            <a href="resume.html" class="btn btn-secondary">View Resume</a>
           </div>
 
           <div class="hero-contact">
@@ -47,180 +46,9 @@
           </div>
         </div>
 
-        <div class="hero-photo">
-          <img src="assets/headshot.jpg" alt="Headshot of Julian Garcia" />
+        <div class="hero-photo-wrapper">
+          <img src="assets/headshot.jpg" alt="Headshot of Julian Garcia" class="hero-photo" />
         </div>
-      </div>
-    </section>
-
-    <!-- RESUME SECTION -->
-    <section id="resume" class="section">
-      <div class="section-inner">
-        <h2>Resume</h2>
-        <p class="section-intro">
-          Here’s a snapshot of my education and background. You can also download a PDF version of my resume below.
-        </p>
-
-        <div class="resume-grid">
-          <div class="resume-card">
-            <h3>Education</h3>
-            <p><strong>University of Arizona</strong> – Tucson, AZ</p>
-            <p>Bachelor of Information Science</p>
-            <p>Minor in Business Administration</p>
-            <p>GPA: 3.7 • Expected Graduation: May 2026</p>
-          </div>
-
-          <div class="resume-card">
-            <h3>Career Objective</h3>
-            <p>
-              Leverage my experience in operations systems, quality assurance, networking, and programming
-              to contribute to a collaborative engineering or data-focused team. I am
-              <strong>seeking a full-time position starting Summer 2026</strong>.
-            </p>
-          </div>
-
-          <div class="resume-card">
-            <h3>Highlights</h3>
-            <ul>
-              <li>Operations Systems Analyst Intern at Freeport-McMoRan (Summer 2025)</li>
-              <li>QA Engineering Intern at McKesson (Summer 2023)</li>
-              <li>CCNA certification through EVIT networking program</li>
-              <li>Hands-on experience in automation testing and safety-driven process design</li>
-            </ul>
-          </div>
-        </div>
-
-        <a href="assets/Julian_Garcia_Resume.pdf" class="btn primary-btn" target="_blank" rel="noopener">
-          Download Resume (PDF)
-        </a>
-      </div>
-    </section>
-
-    <!-- SKILLS SECTION -->
-    <section id="skills" class="section alt-section">
-      <div class="section-inner">
-        <h2>Skills</h2>
-        <p class="section-intro">
-          A mix of technical, design, and collaboration skills developed through internships, coursework,
-          and projects.
-        </p>
-
-        <div class="skills-grid">
-          <div class="skills-card">
-            <h3>Programming & Tools</h3>
-            <ul>
-              <li>Python</li>
-              <li>Java</li>
-              <li>Git & version control</li>
-              <li>Arduino</li>
-              <li>Cypress (test automation)</li>
-            </ul>
-          </div>
-
-          <div class="skills-card">
-            <h3>Design & Productivity</h3>
-            <ul>
-              <li>Microsoft Office Suite</li>
-              <li>Adobe tools</li>
-              <li>Dreamweaver</li>
-              <li>Prezi</li>
-              <li>Slack</li>
-            </ul>
-          </div>
-
-          <div class="skills-card">
-            <h3>Networking & Systems</h3>
-            <ul>
-              <li>LAN design with Cisco Packet Tracer</li>
-              <li>Switch & router configuration</li>
-              <li>IPv4 / IPv6 addressing</li>
-              <li>Network troubleshooting</li>
-              <li>CCNA-certified foundations</li>
-            </ul>
-          </div>
-
-          <div class="skills-card">
-            <h3>Other Strengths</h3>
-            <ul>
-              <li>Intermediate / fluent Spanish</li>
-              <li>Technical writing & documentation</li>
-              <li>Cross-functional teamwork</li>
-              <li>Public speaking & presenting</li>
-              <li>Problem solving & critical thinking</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="section">
-      <div class="section-inner">
-        <h2>Experience</h2>
-
-        <article class="experience-item">
-          <header>
-            <h3>Operation Systems Analyst Intern</h3>
-            <div class="experience-meta">
-              <span>Freeport-McMoRan</span>
-              <span>Morenci, AZ • May 2025 – Aug 2025</span>
-            </div>
-          </header>
-          <ul>
-            <li>Created, drove, and implemented a company-wide Blue Stakes Safety Program.</li>
-            <li>Partnered with stakeholders to understand safety concerns and incorporate them into the program.</li>
-            <li>Collaborated in weekly meetings with Blue Stake representatives and site leadership across multiple locations.</li>
-            <li>Digitized Blue Stake permit workflows via EWS dev API, improving standardization and safety.</li>
-            <li>Built an HTML script to summarize permit review into a printable PDF.</li>
-            <li>Selected to present the project to MIS leadership at PHX headquarters; recognized by senior management.</li>
-          </ul>
-        </article>
-
-        <article class="experience-item">
-          <header>
-            <h3>Quality Assurance Engineering Intern</h3>
-            <div class="experience-meta">
-              <span>McKesson</span>
-              <span>Phoenix, AZ • Jun 2023 – Aug 2023</span>
-            </div>
-          </header>
-          <ul>
-            <li>Performed QA/validation for the migration from myHealthMart to myHealthMartNext.</li>
-            <li>Developed acceptance criteria to streamline future sprints and automated tests.</li>
-            <li>Created and optimized Cypress automation test scenarios to verify user experience and site functionality.</li>
-            <li>Participated in daily standup meetings, prioritizing work and planning tactical actions.</li>
-            <li>Delivered presentations detailing project goals, progress, and timelines.</li>
-          </ul>
-        </article>
-
-        <article class="experience-item">
-          <header>
-            <h3>Networking Student – EVIT</h3>
-            <div class="experience-meta">
-              <span>East Valley Institute of Technology</span>
-              <span>Mesa, AZ • Aug 2021 – May 2022</span>
-            </div>
-          </header>
-          <ul>
-            <li>Completed network creation courses using Cisco Packet Tracer.</li>
-            <li>Designed LANs, configured switches/routers, and implemented IPv4 & IPv6 schemes.</li>
-            <li>Troubleshot connectivity in small networks and earned CCNA certification.</li>
-          </ul>
-        </article>
-
-        <article class="experience-item">
-          <header>
-            <h3>Additional Programs & Activities</h3>
-          </header>
-          <ul>
-            <li>Arizona State University Barrett Honors Summer Scholars – focused on critical thinking, teamwork, and robotics.</li>
-            <li>Purdue Engineering Camp – designed a water dam project with an emphasis on cost, creativity, and teamwork.</li>
-            <li>Dalian International School (China) – three years of international school experience while living abroad.</li>
-            <li>VEX Robotics (HeatSync Labs) – designed and programmed VEX robots using Arduino; placed in state competition.</li>
-            <li>Python projects: Benford’s Law validator, descriptive statistics function, and an Arduino-based “Simon Says” game.</li>
-            <li>Volunteering with RSL Soccer Club and Feed My Starving Children.</li>
-          </ul>
-        </article>
       </div>
     </section>
   </main>
