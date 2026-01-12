@@ -153,8 +153,9 @@ a:hover {
 }
 
 .parents-photo-placeholder p:first-child {
-  font-size: 3rem;
+  font-size: 1.2rem;
   margin: 0 0 0.5rem 0;
+  font-weight: 500;
 }
 
 .photo-note {
@@ -403,14 +404,9 @@ a:hover {
 }
 
 .family-photo-placeholder p:first-child {
-  font-size: 3rem;
+  font-size: 1.2rem;
   margin: 0 0 0.5rem 0;
-}
-
-.photo-note {
-  font-size: 0.9rem;
-  margin: 0.5rem 0 0 0;
-  color: #999;
+  font-weight: 500;
 }
 
 .about-text {
@@ -466,6 +462,47 @@ a:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   border-color: #CC0033;
+}
+
+/* ==================== ZILLOW SECTION ==================== */
+
+.zillow-section {
+  background: #f9f9f9;
+  padding: 2rem 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.zillow-section h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.3rem;
+  color: #003366;
+  text-align: center;
+  font-weight: 600;
+}
+
+.zillow-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.zillow-btn {
+  background: #006AFF;
+  color: #fff;
+  padding: 0.9rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 106, 255, 0.2);
+}
+
+.zillow-btn:hover {
+  background: #0056d6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 106, 255, 0.3);
 }
 
 /* ==================== PROPERTY DETAIL PAGES ==================== */
@@ -813,47 +850,6 @@ a:hover {
   margin-top: 3rem;
 }
 
-/* ==================== ZILLOW SECTION ==================== */
-
-.zillow-section {
-  background: #f9f9f9;
-  padding: 2rem 0;
-  border-top: 1px solid #e5e5e5;
-}
-
-.zillow-section h3 {
-  margin: 0 0 1.5rem 0;
-  font-size: 1.3rem;
-  color: #003366;
-  text-align: center;
-  font-weight: 600;
-}
-
-.zillow-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.zillow-btn {
-  background: #006AFF;
-  color: #fff;
-  padding: 0.9rem 1.75rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0, 106, 255, 0.2);
-}
-
-.zillow-btn:hover {
-  background: #0056d6;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 106, 255, 0.3);
-}
-
 /* ==================== FOOTER ==================== */
 
 .site-footer {
@@ -900,5 +896,13 @@ a:hover {
   .btn {
     width: 100%;
     text-align: center;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-photo {
+    width: 100%;
   }
 }
