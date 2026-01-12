@@ -2,61 +2,232 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Julian Garcia | Home</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>1229 N 4th Ave – UA Student Rental</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta
+    name="description"
+    content="4 bedroom, 2 bathroom UA student rental near the University of Arizona. Fully furnished, utilities included, individual rooms available."
+  />
+
+  <!-- CSS (root level) -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body data-page="home">
+<body>
+
+  <!-- Notice Bar -->
+  <div class="notice-bar">
+    Now pre-leasing for the 2026–2027 academic year · UA students only
+  </div>
+
+  <!-- Header -->
   <header class="site-header">
-    <div class="logo">JG</div>
-    <nav class="nav">
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
-      <ul id="navMenu">
-        <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
-        <li><a href="resume.html" class="nav-link" data-page="resume">Resume</a></li>
-        <li><a href="skills.html" class="nav-link" data-page="skills">Skills</a></li>
-        <li><a href="experience.html" class="nav-link" data-page="experience">Experience</a></li>
-      </ul>
-    </nav>
+    <div class="container header-content">
+      <div>
+        <h1>1229 N 4th Ave</h1>
+        <p class="subtitle">4 bedroom, 2 bathroom home for UA students – Tucson, AZ</p>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#photos">Photos</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#details">House Details</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="page">
-    <section class="card">
-      <div class="hero-grid">
-        <div>
-          <p class="hero-tag">Information Science • University of Arizona</p>
-          <h1 class="hero-heading">
-            Hi, I'm <span>Julian Garcia</span>.
-          </h1>
-          <p class="hero-summary">
-            I'm an Information Science student with a Business Administration minor, experienced in
-            software development, automation, networking, and operations systems.
-            I'm actively seeking a <strong>full-time position starting Summer 2026</strong>
-            where I can help build reliable, efficient solutions to real-world problems.
-          </p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="hero-tag">Quiet home near the University of Arizona</div>
+        <h2>Private 4 Bedroom Home for UA Students</h2>
 
-          <div class="hero-actions">
-            <a href="experience.html" class="btn btn-primary">View Experience</a>
-            <a href="resume.html" class="btn btn-secondary">View Resume</a>
-          </div>
+        <p>
+          A fully furnished four bedroom, two bathroom home designed for
+          University of Arizona students. Rent is by the room, with utilities
+          and internet included.
+        </p>
 
-          <div class="hero-contact">
-            <span>📧 julian.garcia0324@gmail.com</span>
-            <span>📱 (480) 765-4153</span>
-          </div>
+        <p>
+          Ideal for students and parents looking for a clean, quiet alternative
+          to large apartment complexes.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn primary">Call or Text to Inquire</a>
+          <a href="#photos" class="btn secondary">View Photos</a>
         </div>
 
-        <div class="hero-photo-wrapper">
-          <img src="assets/headshot.jpg" alt="Headshot of Julian Garcia" class="hero-photo" />
+        <ul class="quick-facts">
+          <li>4 bedrooms · 2 bathrooms</li>
+          <li>Individual room leases</li>
+          <li>Utilities & internet included</li>
+          <li>Fully furnished</li>
+          <li>No pets · No smoking</li>
+        </ul>
+      </div>
+
+      <!-- Cover Images -->
+      <div class="hero-images">
+        <div class="hero-image-card">
+          <img src="images/front.jpg" alt="Front of the house" />
+          <p class="hero-address">📍 1229 N 4th Ave, Tucson, AZ 85705</p>
+        </div>
+
+        <div class="hero-image-card">
+          <img src="images/living-room-2.jpg" alt="Living room with couch and TV" />
+          <p class="hero-address">Living room with couch and TV</p>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About the House</h2>
+      <p>
+        This single-family home includes four private bedrooms and two bathrooms.
+        Each bedroom is furnished with a bed, dresser, nightstand, and desk.
+        Common areas are also furnished.
+      </p>
+
+      <p>
+        Each student signs an individual lease. Utilities and internet are
+        included, keeping monthly expenses straightforward and predictable.
+      </p>
+    </div>
+  </section>
+
+  <!-- Photos -->
+  <section id="photos" class="section section-alt">
+    <div class="container">
+      <h2>Photos</h2>
+      <p class="section-intro">
+        Use the arrows to view photos of the home and location.
+      </p>
+
+      <div class="carousel">
+        <div class="carousel-image-wrapper">
+          <img id="carousel-image" src="images/front.jpg" alt="House photo" />
+        </div>
+
+        <p id="carousel-caption" class="carousel-caption">
+          Front of the house
+        </p>
+
+        <div class="carousel-controls">
+          <button id="prev-btn" class="btn secondary small">Previous</button>
+          <button id="next-btn" class="btn primary small">Next</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2>Pricing</h2>
+
+      <div class="pricing-grid">
+        <div class="card">
+          <h3>2026–2027 Academic Year</h3>
+          <p class="price">$1,050<span>/room/month</span></p>
+          <ul>
+            <li>Individual bedroom leases</li>
+            <li>Utilities and internet included</li>
+            <li>Furnished bedrooms & common areas</li>
+            <li>Parking available</li>
+            <li>No pets · No smoking</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <section id="details" class="section section-alt">
+    <div class="container">
+      <h2>House Details</h2>
+
+      <div class="details-grid">
+        <div>
+          <h3>Bedrooms</h3>
+          <ul>
+            <li>4 private bedrooms</li>
+            <li>Bed, desk, dresser, and nightstand included</li>
+            <li>Individual leases</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Amenities</h3>
+          <ul>
+            <li>Washer and dryer in the house</li>
+            <li>Central air conditioning</li>
+            <li>Utilities and internet included</li>
+            <li>Parking available</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>
+        For availability or to schedule a viewing, please call, text, or email.
+      </p>
+
+      <div class="contact-box">
+        <p><strong>Phone:</strong> <a href="tel:14803041067">480-304-1067</a></p>
+        <p><strong>Email:</strong> <a href="mailto:carmelag7@hotmail.com">carmelag7@hotmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
-    <p>© <span id="year"></span> Julian Garcia • Seeking full-time opportunities starting Summer 2026</p>
+    <div class="container">
+      <p>© 2025 · 1229 N 4th Ave · Tucson, AZ</p>
+    </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <!-- Carousel Script -->
+  <script>
+    const photos = [
+      { src: "images/front.jpg", caption: "Front of the house" },
+      { src: "images/living-room-2.jpg", caption: "Living room with couch and TV" },
+      { src: "images/bedroom2.jpg", caption: "Furnished bedroom" },
+      { src: "images/bedroom4.webp", caption: "Additional bedroom" },
+      { src: "images/washer-dryer.jpg", caption: "Washer and dryer" },
+      { src: "images/house-overview.jpg", caption: "House and location overview" }
+    ];
+
+    let index = 0;
+    const img = document.getElementById("carousel-image");
+    const caption = document.getElementById("carousel-caption");
+
+    document.getElementById("next-btn").onclick = () => {
+      index = (index + 1) % photos.length;
+      update();
+    };
+
+    document.getElementById("prev-btn").onclick = () => {
+      index = (index - 1 + photos.length) % photos.length;
+      update();
+    };
+
+    function update() {
+      img.src = photos[index].src;
+      img.alt = photos[index].caption;
+      caption.textContent = photos[index].caption;
+    }
+  </script>
+
 </body>
 </html>
