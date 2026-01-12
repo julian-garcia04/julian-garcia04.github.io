@@ -17,151 +17,90 @@
     <div class="container header-content">
       <div>
         <h1>Wildcat Family Housing</h1>
-        <p class="subtitle">Safe, Comfortable Homes for Your UA Student</p>
+        <p class="subtitle">Welcome Wildcats</p>
       </div>
       <nav class="nav">
-        <a href="#homes">Available Homes</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" class="nav-bubble">About</a>
+        <a href="#contact" class="nav-bubble">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-home">
+  <!-- Listings Count -->
+  <div class="listings-bar">
     <div class="container">
-      <div class="hero-home-content">
-        <div class="hero-home-text">
-          <h2>Welcome, Wildcat Families</h2>
-          <p class="hero-large-text">
-            We understand the importance of finding a safe, comfortable home for your student. 
-            As fellow University of Arizona parents, we treat every student like family.
-          </p>
-          <div class="trust-badges">
-            <div class="badge">
-              <span class="badge-icon">🏠</span>
-              <span>Family Owned & Operated</span>
-            </div>
-            <div class="badge">
-              <span class="badge-icon">🛡️</span>
-              <span>Safe Neighborhoods</span>
-            </div>
-            <div class="badge">
-              <span class="badge-icon">✓</span>
-              <span>All Utilities Included</span>
-            </div>
-          </div>
-        </div>
-        <div class="hero-home-image">
-          <div class="owners-photo-placeholder">
-            <p>📷 Your Parents' Photo Here</p>
-            <p class="photo-note">Add your parents' photo as "images/parents.jpg"</p>
-          </div>
-        </div>
-      </div>
+      <span class="listings-count">2 homes available for 2026–2027</span>
     </div>
-  </section>
+  </div>
 
-  <!-- Available Homes -->
-  <section id="homes" class="section">
+  <!-- Property Cards Grid -->
+  <section class="listings-section">
     <div class="container">
-      <h2 class="section-title">Available Homes for 2026–2027</h2>
-      <p class="section-subtitle">
-        Now pre-leasing for the upcoming academic year. Individual bedroom leases with utilities included.
-      </p>
-
-      <div class="homes-grid">
+      
+      <!-- Property Card 1: 1229 N Fourth Ave -->
+      <a href="1229-fourth-ave.html" class="property-card">
+        <div class="property-images">
+          <div class="image-slider" data-property="fourth">
+            <img src="images/front.jpg" alt="1229 N Fourth Ave" class="slider-image active" />
+            <img src="images/living-room-2.jpg" alt="Living room" class="slider-image" />
+            <img src="images/bedroom2.jpg" alt="Bedroom" class="slider-image" />
+            <img src="images/bedroom4.webp" alt="Bedroom" class="slider-image" />
+            <img src="images/washer-dryer.jpg" alt="Washer dryer" class="slider-image" />
+          </div>
+          <button class="slider-btn prev" onclick="changeSlide(event, 'fourth', -1)">‹</button>
+          <button class="slider-btn next" onclick="changeSlide(event, 'fourth', 1)">›</button>
+          <div class="slider-dots" id="dots-fourth"></div>
+        </div>
         
-        <!-- Home 1: 1229 N Fourth Ave -->
-        <a href="1229-fourth-ave.html" class="home-card">
-          <div class="home-card-image">
-            <img src="images/front.jpg" alt="1229 N Fourth Ave" />
+        <div class="property-info">
+          <div class="property-price">$1,050<span>/room/mo</span></div>
+          <div class="property-specs">
+            <span class="spec">4 Beds</span>
+            <span class="spec">2 Baths</span>
           </div>
-          <div class="home-card-content">
-            <h3>1229 N Fourth Ave</h3>
-            <p class="home-address">Tucson, AZ 85705</p>
-            <div class="home-details">
-              <span class="detail-item">🛏️ 4 Bedrooms</span>
-              <span class="detail-item">🚿 2 Bathrooms</span>
-            </div>
-            <p class="home-price">$1,050/room/month</p>
-            <div class="home-card-cta">
-              <span class="cta-text">View Details →</span>
-            </div>
+          <div class="property-address">1229 N Fourth Ave, Tucson, AZ 85705</div>
+          <div class="property-tags">
+            <span class="tag">Individual Leases</span>
+            <span class="tag">Utilities Included</span>
           </div>
-        </a>
+        </div>
+      </a>
 
-        <!-- Home 2: 525 E Speedway -->
-        <a href="525-speedway.html" class="home-card">
-          <div class="home-card-image">
-            <div class="placeholder-image">
-              <p>House Photo Coming Soon</p>
+      <!-- Property Card 2: 525 E Speedway -->
+      <a href="525-speedway.html" class="property-card">
+        <div class="property-images">
+          <div class="image-slider" data-property="speedway">
+            <div class="slider-image active placeholder-slide">
+              <span>Photos Coming Soon</span>
             </div>
           </div>
-          <div class="home-card-content">
-            <h3>525 E Speedway Blvd</h3>
-            <p class="home-address">Tucson, AZ 85705</p>
-            <div class="home-details">
-              <span class="detail-item">🛏️ 4 Bedrooms</span>
-              <span class="detail-item">🚿 2 Bathrooms</span>
-            </div>
-            <p class="home-price">Contact for Pricing</p>
-            <div class="home-card-cta">
-              <span class="cta-text">View Details →</span>
-            </div>
+          <div class="slider-dots" id="dots-speedway"></div>
+        </div>
+        
+        <div class="property-info">
+          <div class="property-price">Contact for Pricing</div>
+          <div class="property-specs">
+            <span class="spec">4 Beds</span>
+            <span class="spec">2 Baths</span>
           </div>
-        </a>
+          <div class="property-address">525 E Speedway Blvd, Tucson, AZ 85705</div>
+          <div class="property-tags">
+            <span class="tag">Individual Leases</span>
+            <span class="tag">Utilities Included</span>
+          </div>
+        </div>
+      </a>
 
-      </div>
     </div>
   </section>
 
-  <!-- About Us -->
-  <section id="about" class="section section-alt">
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
     <div class="container">
-      <h2 class="section-title">Why Parents Choose Us</h2>
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <div class="benefit-icon">🤝</div>
-          <h3>Local & Responsive</h3>
-          <p>We're Tucson-based parents who understand your concerns. Quick responses and personal attention to every student.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">💰</div>
-          <h3>No Surprise Bills</h3>
-          <p>Utilities and internet included in rent means predictable monthly costs. One simple payment covers everything.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">📝</div>
-          <h3>Individual Leases</h3>
-          <p>Each student signs their own lease. No worry about roommates leaving or failing to pay their share.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">🏡</div>
-          <h3>Fully Furnished</h3>
-          <p>Bedrooms and common areas come furnished. Less stress for move-in, more focus on academics.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Ready to Learn More?</h2>
-      <p class="section-subtitle">
-        Call, text, or email us to check availability or schedule a viewing.
-      </p>
-
-      <div class="contact-box-large">
-        <div class="contact-method">
-          <span class="contact-label">Phone:</span>
-          <a href="tel:14803041067" class="contact-link-large">480-304-1067</a>
-        </div>
-        <div class="contact-method">
-          <span class="contact-label">Email:</span>
-          <a href="mailto:carmelag7@hotmail.com" class="contact-link-large">carmelag7@hotmail.com</a>
-        </div>
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <a href="tel:14803041067" class="contact-link">📞 480-304-1067</a>
+        <a href="mailto:carmelag7@hotmail.com" class="contact-link">✉️ carmelag7@hotmail.com</a>
       </div>
     </div>
   </section>
@@ -169,9 +108,83 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Wildcat Family Housing · Tucson, AZ · Serving UA Students & Families</p>
+      <p>© 2025 Wildcat Family Housing · Family-Owned & Operated</p>
     </div>
   </footer>
+
+  <!-- Image Slider Script -->
+  <script>
+    const sliders = {
+      fourth: {
+        currentIndex: 0,
+        images: document.querySelectorAll('[data-property="fourth"] .slider-image')
+      },
+      speedway: {
+        currentIndex: 0,
+        images: document.querySelectorAll('[data-property="speedway"] .slider-image')
+      }
+    };
+
+    // Initialize dots
+    function initDots() {
+      Object.keys(sliders).forEach(property => {
+        const dotsContainer = document.getElementById(`dots-${property}`);
+        const images = sliders[property].images;
+        
+        if (images.length > 1) {
+          for (let i = 0; i < images.length; i++) {
+            const dot = document.createElement('span');
+            dot.className = i === 0 ? 'dot active' : 'dot';
+            dot.onclick = (e) => {
+              e.preventDefault();
+              goToSlide(property, i);
+            };
+            dotsContainer.appendChild(dot);
+          }
+        }
+      });
+    }
+
+    function changeSlide(event, property, direction) {
+      event.preventDefault();
+      event.stopPropagation();
+      
+      const slider = sliders[property];
+      const images = slider.images;
+      
+      if (images.length <= 1) return;
+      
+      images[slider.currentIndex].classList.remove('active');
+      
+      slider.currentIndex += direction;
+      
+      if (slider.currentIndex >= images.length) slider.currentIndex = 0;
+      if (slider.currentIndex < 0) slider.currentIndex = images.length - 1;
+      
+      images[slider.currentIndex].classList.add('active');
+      updateDots(property);
+    }
+
+    function goToSlide(property, index) {
+      const slider = sliders[property];
+      const images = slider.images;
+      
+      images[slider.currentIndex].classList.remove('active');
+      slider.currentIndex = index;
+      images[slider.currentIndex].classList.add('active');
+      updateDots(property);
+    }
+
+    function updateDots(property) {
+      const dots = document.querySelectorAll(`#dots-${property} .dot`);
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === sliders[property].currentIndex);
+      });
+    }
+
+    // Initialize on page load
+    initDots();
+  </script>
 
 </body>
 </html>
