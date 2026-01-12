@@ -2,132 +2,144 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>1229 N 4th Ave – UA Student Rental</title>
+  <title>Wildcat Family Housing – UA Student Rentals in Tucson</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <meta
     name="description"
-    content="4 bedroom, 2 bathroom UA student rental near the University of Arizona. Fully furnished, utilities included, individual rooms available."
+    content="Safe, comfortable homes for University of Arizona students. Family-owned and operated. Individual leases, utilities included."
   />
-
-  <!-- CSS (root level) -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Notice Bar -->
-  <div class="notice-bar">
-    Now pre-leasing for the 2026–2027 academic year · UA students only
-  </div>
 
   <!-- Header -->
   <header class="site-header">
     <div class="container header-content">
       <div>
-        <h1>1229 N 4th Ave</h1>
-        <p class="subtitle">4 bedroom, 2 bathroom home for UA students – Tucson, AZ</p>
+        <h1>Wildcat Family Housing</h1>
+        <p class="subtitle">Safe, Comfortable Homes for Your UA Student</p>
       </div>
       <nav class="nav">
-        <a href="#info">Info</a>
-        <a href="#photos">Photos</a>
-        <a href="#details">House Details</a>
+        <a href="#homes">Available Homes</a>
+        <a href="#about">About Us</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Info -->
-  <section id="info" class="section">
+  <!-- Hero Section -->
+  <section class="hero-home">
     <div class="container">
-      <h2>Info</h2>
-      <p>
-        This single-family home includes four private bedrooms and two bathrooms.
-        Each bedroom is furnished with a bed, dresser, nightstand, and desk.
-        Common areas are also furnished.
-      </p>
-
-      <p>
-        Each student signs an individual lease. Utilities and internet are
-        included, keeping monthly expenses straightforward and predictable.
-      </p>
-    </div>
-  </section>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-inner hero-inner--solo">
-      <div class="hero-images">
-        <div class="hero-image-card">
-          <img src="images/front.jpg" alt="Front of the house" />
-          <p class="hero-address">📍 1229 N 4th Ave, Tucson, AZ 85705</p>
+      <div class="hero-home-content">
+        <div class="hero-home-text">
+          <h2>Welcome, Wildcat Families</h2>
+          <p class="hero-large-text">
+            We understand the importance of finding a safe, comfortable home for your student. 
+            As fellow University of Arizona parents, we treat every student like family.
+          </p>
+          <div class="trust-badges">
+            <div class="badge">
+              <span class="badge-icon">🏠</span>
+              <span>Family Owned & Operated</span>
+            </div>
+            <div class="badge">
+              <span class="badge-icon">🛡️</span>
+              <span>Safe Neighborhoods</span>
+            </div>
+            <div class="badge">
+              <span class="badge-icon">✓</span>
+              <span>All Utilities Included</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-home-image">
+          <div class="owners-photo-placeholder">
+            <p>📷 Your Parents' Photo Here</p>
+            <p class="photo-note">Add your parents' photo as "images/parents.jpg"</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Photos -->
-  <section id="photos" class="section section-alt">
+  <!-- Available Homes -->
+  <section id="homes" class="section">
     <div class="container">
-      <h2>Photos</h2>
-      <p class="section-intro">
-        Use the arrows to view photos of the home and location.
+      <h2 class="section-title">Available Homes for 2026–2027</h2>
+      <p class="section-subtitle">
+        Now pre-leasing for the upcoming academic year. Individual bedroom leases with utilities included.
       </p>
 
-      <div class="carousel">
-        <div class="carousel-image-wrapper">
-          <img id="carousel-image" src="images/front.jpg" alt="House photo" />
-        </div>
+      <div class="homes-grid">
+        
+        <!-- Home 1: 1229 N Fourth Ave -->
+        <a href="1229-fourth-ave.html" class="home-card">
+          <div class="home-card-image">
+            <img src="images/front.jpg" alt="1229 N Fourth Ave" />
+          </div>
+          <div class="home-card-content">
+            <h3>1229 N Fourth Ave</h3>
+            <p class="home-address">Tucson, AZ 85705</p>
+            <div class="home-details">
+              <span class="detail-item">🛏️ 4 Bedrooms</span>
+              <span class="detail-item">🚿 2 Bathrooms</span>
+            </div>
+            <p class="home-price">$1,050/room/month</p>
+            <div class="home-card-cta">
+              <span class="cta-text">View Details →</span>
+            </div>
+          </div>
+        </a>
 
-        <p id="carousel-caption" class="carousel-caption">
-          Front of the house
-        </p>
+        <!-- Home 2: 525 E Speedway -->
+        <a href="525-speedway.html" class="home-card">
+          <div class="home-card-image">
+            <div class="placeholder-image">
+              <p>House Photo Coming Soon</p>
+            </div>
+          </div>
+          <div class="home-card-content">
+            <h3>525 E Speedway Blvd</h3>
+            <p class="home-address">Tucson, AZ 85705</p>
+            <div class="home-details">
+              <span class="detail-item">🛏️ 4 Bedrooms</span>
+              <span class="detail-item">🚿 2 Bathrooms</span>
+            </div>
+            <p class="home-price">Contact for Pricing</p>
+            <div class="home-card-cta">
+              <span class="cta-text">View Details →</span>
+            </div>
+          </div>
+        </a>
 
-        <div class="carousel-controls">
-          <button id="prev-btn" class="btn secondary small">Previous</button>
-          <button id="next-btn" class="btn primary small">Next</button>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- House Details -->
-  <section id="details" class="section">
+  <!-- About Us -->
+  <section id="about" class="section section-alt">
     <div class="container">
-      <h2>House Details</h2>
-      <p class="section-intro">
-        Pricing, bedrooms, and amenities for the 2026–2027 academic year.
-      </p>
-
-      <div class="cards-grid">
-        <div class="card">
-          <h3>2026–2027 Academic Year</h3>
-          <p class="price">$1,050<span>/room/month</span></p>
-          <ul>
-            <li>Individual bedroom leases</li>
-            <li>Utilities and internet included</li>
-            <li>Furnished bedrooms &amp; common areas</li>
-            <li>Parking available</li>
-            <li>No pets &middot; No smoking</li>
-          </ul>
+      <h2 class="section-title">Why Parents Choose Us</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🤝</div>
+          <h3>Local & Responsive</h3>
+          <p>We're Tucson-based parents who understand your concerns. Quick responses and personal attention to every student.</p>
         </div>
-
-        <div class="card">
-          <h3>Bedrooms</h3>
-          <ul>
-            <li>4 private bedrooms</li>
-            <li>Bed, desk, dresser, and nightstand included</li>
-            <li>Individual leases</li>
-          </ul>
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h3>No Surprise Bills</h3>
+          <p>Utilities and internet included in rent means predictable monthly costs. One simple payment covers everything.</p>
         </div>
-
-        <div class="card">
-          <h3>Amenities</h3>
-          <ul>
-            <li>Washer and dryer in the house</li>
-            <li>Central air conditioning</li>
-            <li>Utilities and internet included</li>
-            <li>Parking available</li>
-          </ul>
+        <div class="benefit-card">
+          <div class="benefit-icon">📝</div>
+          <h3>Individual Leases</h3>
+          <p>Each student signs their own lease. No worry about roommates leaving or failing to pay their share.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🏡</div>
+          <h3>Fully Furnished</h3>
+          <p>Bedrooms and common areas come furnished. Less stress for move-in, more focus on academics.</p>
         </div>
       </div>
     </div>
@@ -136,14 +148,20 @@
   <!-- Contact -->
   <section id="contact" class="section">
     <div class="container">
-      <h2>Contact</h2>
-      <p>
-        For availability or to schedule a viewing, please call, text, or email.
+      <h2 class="section-title">Ready to Learn More?</h2>
+      <p class="section-subtitle">
+        Call, text, or email us to check availability or schedule a viewing.
       </p>
 
-      <div class="contact-box">
-        <p><strong>Phone:</strong> <a href="tel:14803041067">480-304-1067</a></p>
-        <p><strong>Email:</strong> <a href="mailto:carmelag7@hotmail.com">carmelag7@hotmail.com</a></p>
+      <div class="contact-box-large">
+        <div class="contact-method">
+          <span class="contact-label">Phone:</span>
+          <a href="tel:14803041067" class="contact-link-large">480-304-1067</a>
+        </div>
+        <div class="contact-method">
+          <span class="contact-label">Email:</span>
+          <a href="mailto:carmelag7@hotmail.com" class="contact-link-large">carmelag7@hotmail.com</a>
+        </div>
       </div>
     </div>
   </section>
@@ -151,41 +169,9 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 · 1229 N 4th Ave · Tucson, AZ</p>
+      <p>© 2025 Wildcat Family Housing · Tucson, AZ · Serving UA Students & Families</p>
     </div>
   </footer>
-
-  <!-- Carousel Script -->
-  <script>
-    const photos = [
-      { src: "images/front.jpg", caption: "Front of the house" },
-      { src: "images/living-room-2.jpg", caption: "Living room with couch and TV" },
-      { src: "images/bedroom2.jpg", caption: "Furnished bedroom" },
-      { src: "images/bedroom4.webp", caption: "Additional bedroom" },
-      { src: "images/washer-dryer.jpg", caption: "Washer and dryer" },
-      { src: "images/house-overview.jpg", caption: "House and location overview" }
-    ];
-
-    let index = 0;
-    const img = document.getElementById("carousel-image");
-    const caption = document.getElementById("carousel-caption");
-
-    document.getElementById("next-btn").onclick = () => {
-      index = (index + 1) % photos.length;
-      update();
-    };
-
-    document.getElementById("prev-btn").onclick = () => {
-      index = (index - 1 + photos.length) % photos.length;
-      update();
-    };
-
-    function update() {
-      img.src = photos[index].src;
-      img.alt = photos[index].caption;
-      caption.textContent = photos[index].caption;
-    }
-  </script>
 
 </body>
 </html>
