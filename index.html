@@ -79,7 +79,6 @@
           </div>
           <button class="slider-btn prev" onclick="changeSlide(event, 'fourth', -1)">‹</button>
           <button class="slider-btn next" onclick="changeSlide(event, 'fourth', 1)">›</button>
-          <div class="slider-dots" id="dots-fourth"></div>
         </div>
         
         <div class="property-info">
@@ -92,6 +91,7 @@
           <div class="property-tags">
             <span class="tag">Individual Leases</span>
             <span class="tag">Utilities Included</span>
+            <a href="https://www.zillow.com/homedetails/1229-N-4th-Ave-Tucson-AZ-85705/8475970_zpid/" target="_blank" class="tag tag-link" onclick="event.stopPropagation();">View on Zillow</a>
           </div>
         </div>
       </a>
@@ -104,7 +104,6 @@
               <span>Photos Coming Soon</span>
             </div>
           </div>
-          <div class="slider-dots" id="dots-speedway"></div>
         </div>
         
         <div class="property-info">
@@ -117,6 +116,7 @@
           <div class="property-tags">
             <span class="tag">Individual Leases</span>
             <span class="tag">Utilities Included</span>
+            <a href="https://www.zillow.com/homedetails/525-E-Speedway-Blvd-Tucson-AZ-85705/8476029_zpid/" target="_blank" class="tag tag-link" onclick="event.stopPropagation();">View on Zillow</a>
           </div>
         </div>
       </a>
@@ -174,26 +174,6 @@
       }
     };
 
-    // Initialize dots
-    function initDots() {
-      Object.keys(sliders).forEach(property => {
-        const dotsContainer = document.getElementById(`dots-${property}`);
-        const images = sliders[property].images;
-        
-        if (images.length > 1) {
-          for (let i = 0; i < images.length; i++) {
-            const dot = document.createElement('span');
-            dot.className = i === 0 ? 'dot active' : 'dot';
-            dot.onclick = (e) => {
-              e.preventDefault();
-              goToSlide(property, i);
-            };
-            dotsContainer.appendChild(dot);
-          }
-        }
-      });
-    }
-
     function changeSlide(event, property, direction) {
       event.preventDefault();
       event.stopPropagation();
@@ -211,28 +191,7 @@
       if (slider.currentIndex < 0) slider.currentIndex = images.length - 1;
       
       images[slider.currentIndex].classList.add('active');
-      updateDots(property);
     }
-
-    function goToSlide(property, index) {
-      const slider = sliders[property];
-      const images = slider.images;
-      
-      images[slider.currentIndex].classList.remove('active');
-      slider.currentIndex = index;
-      images[slider.currentIndex].classList.add('active');
-      updateDots(property);
-    }
-
-    function updateDots(property) {
-      const dots = document.querySelectorAll(`#dots-${property} .dot`);
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === sliders[property].currentIndex);
-      });
-    }
-
-    // Initialize on page load
-    initDots();
   </script>
 
 </body>
