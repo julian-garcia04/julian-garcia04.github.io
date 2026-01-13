@@ -19,7 +19,7 @@ img {
 }
 
 a {
-  color: #0C234B;
+  color: #CC0033;
   text-decoration: none;
   transition: all 0.2s ease;
 }
@@ -37,7 +37,7 @@ a:hover {
 /* ==================== HEADER ==================== */
 
 .site-header {
-  background: #8B1C2D;
+  background: #0C234B;
   color: #fff;
   position: sticky;
   top: 0;
