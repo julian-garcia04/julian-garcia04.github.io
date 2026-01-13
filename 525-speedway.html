@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>525 E Speedway Blvd – My Wildcat Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <div>
+        <h1>My Wildcat Home</h1>
+        <p class="subtitle">Welcome Wildcats</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-bubble">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="detail-hero">
+    <div class="container">
+      <a class="back-link" href="index.html">← Back to Listings</a>
+      <h2 class="detail-title">525 E Speedway Blvd</h2>
+      <p class="detail-subtitle">Tucson, AZ 85705 • 4 Beds • 2 Baths • $1,000/room/mo</p>
+
+      <div class="slider-wrap">
+        <div class="slider-stage" data-slider="speedway">
+          <img src="images/Speedway/frontHouse.jpg" alt="Front" class="active" />
+          <!-- Add more Speedway photos here later -->
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn" onclick="slide('speedway', -1)">← Prev</button>
+          <button class="slider-btn" onclick="slide('speedway', 1)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Add more info here later -->
+
+    </div>
+  </section>
+
+  <script>
+    const sliders = {
+      speedway: { index: 0, images: null }
+    };
+
+    function initSlider(key) {
+      const stage = document.querySelector('[data-slider="' + key + '"]');
+      if (!stage) return;
+      sliders[key].images = stage.querySelectorAll('img');
+      sliders[key].index = 0;
+    }
+
+    function slide(key, dir) {
+      const s = sliders[key];
+      if (!s.images || s.images.length <= 1) return;
+
+      s.images[s.index].classList.remove('active');
+      s.index = (s.index + dir + s.images.length) % s.images.length;
+      s.images[s.index].classList.add('active');
+    }
+
+    initSlider('speedway');
+  </script>
+
+</body>
+</html>

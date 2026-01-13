@@ -26,7 +26,7 @@
     </div>
   </header>
 
-  <!-- Hero Welcome Section -->
+  <!-- Hero -->
   <section class="hero-welcome">
     <div class="container">
       <h2>Welcome, Wildcat Families</h2>
@@ -44,29 +44,18 @@
     </div>
   </section>
 
-  <!-- Property Cards Grid -->
+  <!-- Listings -->
   <section class="listings-section">
     <div class="container">
 
-      <!-- Property Card 1: 1229 N Fourth Ave -->
+      <!-- 1229 N Fourth Ave -->
       <a href="1229-fourth-ave.html" class="property-card">
         <div class="property-images">
-          <div class="image-slider" data-property="fourth">
-            <img src="images/4thAve/front.webp" alt="1229 N Fourth Ave" class="slider-image active" />
-            <img src="images/4thAve/4thaveLivingRoom.webp" alt="Living room" class="slider-image" />
-            <img src="images/4thAve/livingRoom2.webp" alt="Living room view 2" class="slider-image" />
-            <img src="images/4thAve/backyard.webp" alt="backyard" class="slider-image" />
-            <img src="images/4thAve/4thaveRoom2.webp" alt="Bedroom 2" class="slider-image" />
-            <img src="images/4thAve/room3.webp" alt="Bedroom 3" class="slider-image" />
-            <img src="images/4thAve/room4.webp" alt="Bedroom 4" class="slider-image" />
-            <img src="images/4thAve/bathroom1.webp" alt="Bathroom 1" class="slider-image" />
-            <img src="images/4thAve/bathroom2.webp" alt="Bathroom 2" class="slider-image" />
-            <img src="images/4thAve/shower2.webp" alt="Shower" class="slider-image" />
-            <img src="images/4thAve/appliances.webp" alt="Kitchen appliances" class="slider-image" />
-          </div>
-
-          <button class="slider-btn prev" onclick="changeSlide(event, 'fourth', -1)">‹</button>
-          <button class="slider-btn next" onclick="changeSlide(event, 'fourth', 1)">›</button>
+          <img
+            src="images/4thAve/front.webp"
+            alt="1229 N Fourth Ave - Front of house"
+            class="cover-image"
+          />
         </div>
 
         <div class="property-info">
@@ -86,13 +75,14 @@
         </div>
       </a>
 
-      <!-- Property Card 2: 525 E Speedway -->
+      <!-- 525 E Speedway -->
       <a href="525-speedway.html" class="property-card">
         <div class="property-images">
-          <div class="image-slider" data-property="speedway">
-            <img src="images/Speedway/frontHouse.jpg" alt="525 E Speedway Blvd" class="slider-image active" />
-          </div>
-          <!-- No buttons since it's just a cover photo -->
+          <img
+            src="images/Speedway/frontHouse.jpg"
+            alt="525 E Speedway Blvd - Front of house"
+            class="cover-image"
+          />
         </div>
 
         <div class="property-info">
@@ -115,7 +105,7 @@
     </div>
   </section>
 
-  <!-- About Us Section -->
+  <!-- About -->
   <section id="about" class="about-section">
     <div class="container">
       <h2>About Us</h2>
@@ -143,7 +133,7 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact" class="contact-section">
     <div class="container">
       <h2>Contact Us</h2>
@@ -154,7 +144,7 @@
     </div>
   </section>
 
-  <!-- Zillow Links Section -->
+  <!-- Zillow -->
   <section class="zillow-section">
     <div class="container">
       <h3>View Full Listings on Zillow</h3>
@@ -175,38 +165,6 @@
       <p>© 2025 My Wildcat Home · Family-Owned & Operated</p>
     </div>
   </footer>
-
-  <!-- Image Slider Script -->
-  <script>
-    const sliders = {
-      fourth: {
-        currentIndex: 0,
-        images: document.querySelectorAll('[data-property="fourth"] .slider-image')
-      },
-      speedway: {
-        currentIndex: 0,
-        images: document.querySelectorAll('[data-property="speedway"] .slider-image')
-      }
-    };
-
-    function changeSlide(event, property, direction) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      const slider = sliders[property];
-      const images = slider.images;
-
-      if (!images || images.length <= 1) return;
-
-      images[slider.currentIndex].classList.remove('active');
-
-      slider.currentIndex += direction;
-      if (slider.currentIndex >= images.length) slider.currentIndex = 0;
-      if (slider.currentIndex < 0) slider.currentIndex = images.length - 1;
-
-      images[slider.currentIndex].classList.add('active');
-    }
-  </script>
 
 </body>
 </html>

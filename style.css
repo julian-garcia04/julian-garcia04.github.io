@@ -131,7 +131,7 @@ a:hover {
   border: 2px solid #f0ede8;
 }
 
-/* ==================== PROPERTY CARDS ==================== */
+/* ==================== LISTINGS ==================== */
 
 .listings-section {
   padding: 2rem 0 3rem;
@@ -145,6 +145,13 @@ a:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   margin-bottom: 1.5rem;
   border: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.property-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+  transform: translateY(-2px);
+  transition: 0.2s ease;
 }
 
 .property-images {
@@ -156,46 +163,12 @@ a:hover {
   overflow: hidden;
 }
 
-.image-slider {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.slider-image {
-  position: absolute;
-  inset: 0;
+/* MAIN PAGE cover image */
+.cover-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
 }
-
-.slider-image.active {
-  opacity: 1;
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: white;
-  border-radius: 50%;
-  border: none;
-  width: 36px;
-  height: 36px;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 10;
-  opacity: 0;
-}
-
-.property-images:hover .slider-btn {
-  opacity: 1;
-}
-
-.slider-btn.prev { left: 10px; }
-.slider-btn.next { right: 10px; }
 
 /* ==================== PROPERTY INFO ==================== */
 
@@ -204,29 +177,51 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  flex: 1;
 }
 
 .property-title-card {
   font-size: 1.4rem;
   font-weight: 700;
   color: #003366;
+  margin: 0;
 }
 
 .property-price {
   font-size: 1.75rem;
   font-weight: 700;
   color: #CC0033;
+  line-height: 1.2;
 }
 
 .property-price span {
   font-size: 1rem;
   color: #666;
+  font-weight: 400;
+}
+
+.property-specs {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.spec {
+  font-weight: 500;
+}
+
+.property-address {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
 }
 
 .property-tags {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin-top: 0.25rem;
 }
 
 .tag {
@@ -235,7 +230,97 @@ a:hover {
   padding: 0.35rem 0.75rem;
   border-radius: 4px;
   font-size: 0.85rem;
+  font-weight: 500;
   border: 1px solid #d4e6f7;
+}
+
+/* ==================== DETAIL PAGE (SLIDER) ==================== */
+
+.detail-hero {
+  padding: 2.5rem 0;
+  background: linear-gradient(135deg, #f0ede8 0%, #faf8f5 100%);
+  border-bottom: 3px solid #D4A574;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #003366;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.detail-title {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #003366;
+}
+
+.detail-subtitle {
+  margin: 0.25rem 0 0 0;
+  color: #666;
+  font-size: 1.15rem;
+}
+
+/* Slider container on detail pages */
+.slider-wrap {
+  margin-top: 1.5rem;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  border: 2px solid #f0ede8;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.slider-stage {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.slider-stage img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.slider-stage img.active {
+  opacity: 1;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.slider-btn {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.8rem 1.25rem;
+  border-radius: 10px;
+  background: #003366;
+  color: #fff;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.slider-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
 }
 
 /* ==================== ABOUT ==================== */
@@ -243,12 +328,24 @@ a:hover {
 .about-section {
   background: #fff;
   padding: 3rem 0;
+  border-top: 1px solid #eee;
+}
+
+.about-section h2 {
+  text-align: center;
+  margin: 0 0 2rem 0;
+  color: #003366;
 }
 
 .about-content {
   display: flex;
   gap: 3rem;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-photo {
+  flex: 0 1 320px;
 }
 
 .family-photo {
@@ -257,6 +354,95 @@ a:hover {
   border-radius: 16px;
   object-fit: cover;
   border: 3px solid #f0ede8;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.about-text {
+  flex: 1 1 400px;
+}
+
+.about-text p {
+  margin: 0 0 1rem 0;
+  color: #444;
+  font-size: 1.05rem;
+}
+
+/* ==================== CONTACT ==================== */
+
+.contact-section {
+  background: #f9f9f9;
+  padding: 2.5rem 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.contact-section h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.75rem;
+  color: #003366;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  font-size: 1.25rem;
+  color: #CC0033;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 2px solid #f0f0f0;
+}
+
+.contact-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-color: #CC0033;
+}
+
+/* ==================== ZILLOW ==================== */
+
+.zillow-section {
+  background: #f9f9f9;
+  padding: 2rem 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.zillow-section h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.3rem;
+  color: #003366;
+  text-align: center;
+  font-weight: 600;
+}
+
+.zillow-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.zillow-btn {
+  background: #006AFF;
+  color: #fff;
+  padding: 0.9rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 106, 255, 0.2);
+}
+
+.zillow-btn:hover {
+  background: #0056d6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 106, 255, 0.3);
 }
 
 /* ==================== FOOTER ==================== */
@@ -268,7 +454,12 @@ a:hover {
   text-align: center;
 }
 
-/* ==================== MOBILE ==================== */
+.site-footer p {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
 
 @media (max-width: 768px) {
   .property-card {
@@ -278,6 +469,10 @@ a:hover {
   .property-images {
     width: 100%;
     height: 240px;
+  }
+
+  .slider-stage {
+    height: 320px;
   }
 
   .about-content {
