@@ -1,286 +1,211 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wildcat Family Housing – UA Student Rentals in Tucson</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Safe, comfortable homes for University of Arizona students. Family-owned and operated. Individual leases, utilities included."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.7;
-  color: #1a1a1a;
-  background: #f7f7f7;
-  font-size: 16px;
-}
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-content">
+      <div>
+        <h1>My Wildcat Home</h1>
+        <p class="subtitle">Welcome Wildcats</p>
+      </div>
+      <nav class="nav">
+        <a href="#about" class="nav-bubble">About</a>
+        <a href="#contact" class="nav-bubble">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-img {
-  max-width: 100%;
-  display: block;
-}
+  <!-- Hero Welcome Section -->
+  <section class="hero-welcome">
+    <div class="container">
+      <h2>Welcome, Wildcat Families</h2>
+      <p class="hero-subtitle">
+        We understand the importance of finding a safe, comfortable home for your student.
+        As fellow University of Arizona parents, we treat every student like family.
+      </p>
 
-a {
-  color: #CC0033;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
+      <div class="features-badges">
+        <div class="feature-badge"><span>Family Owned & Operated</span></div>
+        <div class="feature-badge"><span>Homes under 1.3 Miles from Campus</span></div>
+        <div class="feature-badge"><span>All Utilities Included</span></div>
+        <div class="feature-badge"><span>Fully Furnished</span></div>
+      </div>
+    </div>
+  </section>
 
-a:hover {
-  color: #a3002a;
-}
+  <!-- Property Cards Grid -->
+  <section class="listings-section">
+    <div class="container">
 
-.container {
-  width: 92%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+      <!-- Property Card 1: 1229 N Fourth Ave -->
+      <a href="1229-fourth-ave.html" class="property-card">
+        <div class="property-images">
+          <div class="image-slider" data-property="fourth">
+            <img src="images/4thAve/frontHouse.webp" alt="1229 N Fourth Ave" class="slider-image active" />
+            <img src="images/4thAve/4thaveLivingRoom.webp" alt="Living room" class="slider-image" />
+            <img src="images/4thAve/livingRoom2.webp" alt="Living room view 2" class="slider-image" />
+            <img src="images/4thAve/4thaveRoom2.webp" alt="Bedroom 2" class="slider-image" />
+            <img src="images/4thAve/room3.webp" alt="Bedroom 3" class="slider-image" />
+            <img src="images/4thAve/room4.webp" alt="Bedroom 4" class="slider-image" />
+            <img src="images/4thAve/bathroom1.webp" alt="Bathroom 1" class="slider-image" />
+            <img src="images/4thAve/bathroom2.webp" alt="Bathroom 2" class="slider-image" />
+            <img src="images/4thAve/shower2.webp" alt="Shower" class="slider-image" />
+            <img src="images/4thAve/appliances.webp" alt="Kitchen appliances" class="slider-image" />
+          </div>
 
-/* ==================== HEADER ==================== */
+          <button class="slider-btn prev" onclick="changeSlide(event, 'fourth', -1)">‹</button>
+          <button class="slider-btn next" onclick="changeSlide(event, 'fourth', 1)">›</button>
+        </div>
 
-.site-header {
-  background: #8B1C2D;
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+        <div class="property-info">
+          <h3 class="property-title-card">1229 N Fourth Ave</h3>
+          <div class="property-price">$1,000<span>/room/mo</span></div>
+          <div class="property-specs">
+            <span class="spec">4 Beds</span>
+            <span class="spec">2 Baths</span>
+          </div>
+          <div class="property-address">Tucson, AZ 85705</div>
+          <div class="property-tags">
+            <span class="tag">WiFi/Utilities Included</span>
+            <span class="tag">Individual Leases</span>
+            <span class="tag">Gated Backyard</span>
+            <span class="tag">Car Parking</span>
+          </div>
+        </div>
+      </a>
 
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 0;
-}
+      <!-- Property Card 2: 525 E Speedway -->
+      <a href="525-speedway.html" class="property-card">
+        <div class="property-images">
+          <div class="image-slider" data-property="speedway">
+            <img src="images/Speedway/frontHouse.jpg" alt="525 E Speedway Blvd" class="slider-image active" />
+          </div>
+          <!-- No buttons since it's just a cover photo -->
+        </div>
 
-.site-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-}
+        <div class="property-info">
+          <h3 class="property-title-card">525 E Speedway Blvd</h3>
+          <div class="property-price">$1,000<span>/room/mo</span></div>
+          <div class="property-specs">
+            <span class="spec">4 Beds</span>
+            <span class="spec">2 Baths</span>
+          </div>
+          <div class="property-address">Tucson, AZ 85705</div>
+          <div class="property-tags">
+            <span class="tag">WiFi/Utilities Included</span>
+            <span class="tag">Individual Leases</span>
+            <span class="tag">Gated Backyard</span>
+            <span class="tag">Car Parking</span>
+          </div>
+        </div>
+      </a>
 
-.subtitle {
-  margin: 0.2rem 0 0 0;
-  font-size: 0.95rem;
-  opacity: 0.95;
-  color: #D4A574;
-}
+    </div>
+  </section>
 
-.nav {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
+  <!-- About Us Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About Us</h2>
 
-.nav-bubble {
-  font-size: 1rem;
-  color: #fff;
-  font-weight: 500;
-  padding: 0.5rem 1.25rem;
-  border-radius: 20px;
-  transition: all 0.2s ease;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
-}
+      <div class="about-content">
+        <div class="about-photo">
+          <img
+            src="images/familyPhoto.jpeg"
+            alt="Wildcat Home Family"
+            class="family-photo"
+          />
+        </div>
 
-.nav-bubble:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-1px);
-}
+        <div class="about-text">
+          <p>
+            We're a local Tucson family who understands what it means to send your student off to college.
+            Our homes provide a safe, comfortable environment where students can focus on their studies while you have peace of mind.
+          </p>
+          <p>
+            Each property is maintained with care, and we're always just a phone call away.
+            We treat every student like family because we know how important that is to you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-/* ==================== HERO ==================== */
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <a href="tel:14803041067" class="contact-link">480-304-1067</a>
+        <a href="mailto:carmelag7@hotmail.com" class="contact-link">carmelag7@hotmail.com</a>
+      </div>
+    </div>
+  </section>
 
-.hero-welcome {
-  background: linear-gradient(135deg, #f5f2ed 0%, #faf8f5 100%);
-  padding: 3.5rem 0;
-  border-bottom: 3px solid #D4A574;
-}
+  <!-- Zillow Links Section -->
+  <section class="zillow-section">
+    <div class="container">
+      <h3>View Full Listings on Zillow</h3>
+      <div class="zillow-links">
+        <a href="https://www.zillow.com/homedetails/1229-N-4th-Ave-Tucson-AZ-85705/8475970_zpid/" target="_blank" class="zillow-btn">
+          <span>1229 N Fourth Ave on Zillow</span>
+        </a>
+        <a href="https://www.zillow.com/homedetails/525-E-Speedway-Blvd-Tucson-AZ-85705/8476029_zpid/" target="_blank" class="zillow-btn">
+          <span>525 E Speedway Blvd on Zillow</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-.hero-welcome h2 {
-  font-size: 2.5rem;
-  color: #003366;
-  margin: 0 0 1rem 0;
-  text-align: center;
-}
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 My Wildcat Home · Family-Owned & Operated</p>
+    </div>
+  </footer>
 
-.hero-subtitle {
-  font-size: 1.2rem;
-  color: #444;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 2.5rem;
-  line-height: 1.6;
-}
+  <!-- Image Slider Script -->
+  <script>
+    const sliders = {
+      fourth: {
+        currentIndex: 0,
+        images: document.querySelectorAll('[data-property="fourth"] .slider-image')
+      },
+      speedway: {
+        currentIndex: 0,
+        images: document.querySelectorAll('[data-property="speedway"] .slider-image')
+      }
+    };
 
-.features-badges {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+    function changeSlide(event, property, direction) {
+      event.preventDefault();
+      event.stopPropagation();
 
-.feature-badge {
-  background: #fff;
-  padding: 1rem 1.75rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #003366;
-  border: 2px solid #f0ede8;
-}
+      const slider = sliders[property];
+      const images = slider.images;
 
-/* ==================== PROPERTY CARDS ==================== */
+      if (!images || images.length <= 1) return;
 
-.listings-section {
-  padding: 2rem 0 3rem;
-}
+      images[slider.currentIndex].classList.remove('active');
 
-.property-card {
-  display: flex;
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-  margin-bottom: 1.5rem;
-  border: 1px solid #e5e5e5;
-}
+      slider.currentIndex += direction;
+      if (slider.currentIndex >= images.length) slider.currentIndex = 0;
+      if (slider.currentIndex < 0) slider.currentIndex = images.length - 1;
 
-.property-images {
-  width: 340px;
-  min-width: 340px;
-  height: 255px;
-  background: #f0f0f0;
-  position: relative;
-  overflow: hidden;
-}
+      images[slider.currentIndex].classList.add('active');
+    }
+  </script>
 
-.image-slider {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.slider-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-}
-
-.slider-image.active {
-  opacity: 1;
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: white;
-  border-radius: 50%;
-  border: none;
-  width: 36px;
-  height: 36px;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 10;
-  opacity: 0;
-}
-
-.property-images:hover .slider-btn {
-  opacity: 1;
-}
-
-.slider-btn.prev { left: 10px; }
-.slider-btn.next { right: 10px; }
-
-/* ==================== PROPERTY INFO ==================== */
-
-.property-info {
-  padding: 1.25rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.property-title-card {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #003366;
-}
-
-.property-price {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #CC0033;
-}
-
-.property-price span {
-  font-size: 1rem;
-  color: #666;
-}
-
-.property-tags {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.tag {
-  background: #f0f7ff;
-  color: #003366;
-  padding: 0.35rem 0.75rem;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  border: 1px solid #d4e6f7;
-}
-
-/* ==================== ABOUT ==================== */
-
-.about-section {
-  background: #fff;
-  padding: 3rem 0;
-}
-
-.about-content {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-}
-
-.family-photo {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 16px;
-  object-fit: cover;
-  border: 3px solid #f0ede8;
-}
-
-/* ==================== FOOTER ==================== */
-
-.site-footer {
-  background: #003366;
-  color: #D4A574;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-/* ==================== MOBILE ==================== */
-
-@media (max-width: 768px) {
-  .property-card {
-    flex-direction: column;
-  }
-
-  .property-images {
-    width: 100%;
-    height: 240px;
-  }
-
-  .about-content {
-    flex-direction: column;
-  }
-}
+</body>
+</html>
