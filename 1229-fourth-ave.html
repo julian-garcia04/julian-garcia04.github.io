@@ -33,11 +33,11 @@
         <a class="back-bubble" href="index.html">← Back to Listings</a>
       </div>
 
-      <!-- ✅ Image Slider Card (Scrollable Album) -->
-      <div class="slider-card" aria-label="Photo album slider">
-        <div class="slider-track">
-          <img src="images/4thAve/front.jpg" alt="Front of house" />
-          <img src="images/4thAve/backyard.jpg" alt="Backyard" />
+      <!-- Photo Slider Gallery Widget -->
+      <div class="gallery-carousel" data-gallery="fourth">
+        <div class="carousel-image-wrapper">
+          <img src="images/4thAve/front.jpg" alt="Front" class="active" />
+          <img src="images/4thAve/backyard.jpg" alt="Front" class="active" />
           <img src="images/4thAve/4thaveLivingRoom.webp" alt="Living room" />
           <img src="images/4thAve/livingRoom2.webp" alt="Living room view 2" />
           <img src="images/4thAve/4thaveRoom2.webp" alt="Bedroom 2" />
@@ -49,11 +49,9 @@
           <img src="images/4thAve/appliances.webp" alt="Kitchen appliances" />
         </div>
 
-        <button class="slider-btn left" type="button" aria-label="Previous photo" onclick="slideGallery(-1)">‹</button>
-        <button class="slider-btn right" type="button" aria-label="Next photo" onclick="slideGallery(1)">›</button>
-
-        <div class="slider-counter" aria-live="polite">
-          <span id="slideCurrent">1</span> / <span id="slideTotal">11</span>
+        <div class="carousel-controls">
+          <button class="btn secondary" onclick="changeGallerySlide('fourth', -1)">← Prev</button>
+          <button class="btn primary" onclick="changeGallerySlide('fourth', 1)">Next →</button>
         </div>
       </div>
 
@@ -63,39 +61,22 @@
   </section>
 
   <script>
-    // Slider logic
-    let slideIndex = 0;
-    const track = document.querySelector(".slider-track");
-    const slides = document.querySelectorAll(".slider-track img");
-    const total = slides.length;
+    const galleries = {
+      fourth: {
+        index: 0,
+        images: document.querySelectorAll('[data-gallery="fourth"] .carousel-image-wrapper img')
+      }
+    };
 
-    const currentEl = document.getElementById("slideCurrent");
-    const totalEl = document.getElementById("slideTotal");
-    if (totalEl) totalEl.textContent = total;
+    function changeGallerySlide(key, direction) {
+      const g = galleries[key];
+      const imgs = g.images;
+      if (!imgs || imgs.length <= 1) return;
 
-    function updateCounter() {
-      if (!currentEl) return;
-      currentEl.textContent = String(slideIndex + 1);
+      imgs[g.index].classList.remove('active');
+      g.index = (g.index + direction + imgs.length) % imgs.length;
+      imgs[g.index].classList.add('active');
     }
-
-    function slideGallery(dir) {
-      if (!track || total <= 1) return;
-
-      slideIndex += dir;
-      if (slideIndex < 0) slideIndex = total - 1;
-      if (slideIndex >= total) slideIndex = 0;
-
-      track.style.transform = `translateX(-${slideIndex * 100}%)`;
-      updateCounter();
-    }
-
-    // Optional: keyboard support
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowLeft") slideGallery(-1);
-      if (e.key === "ArrowRight") slideGallery(1);
-    });
-
-    updateCounter();
   </script>
 
 </body>
