@@ -6,11 +6,9 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.7;
-  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", Arial, sans-serif;
   background: #f7f7f7;
-  font-size: 16px;
+  color: #1a1a1a;
 }
 
 img {
@@ -19,288 +17,159 @@ img {
 }
 
 a {
-  color: #CC0033;
   text-decoration: none;
-  transition: all 0.2s ease;
 }
 
-a:hover {
-  color: #a3002a;
-}
-
-.container {
-  width: 92%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* ==================== HEADER ==================== */
+/* ================= HEADER ================= */
 
 .site-header {
   background: #0C234B;
   color: #fff;
   position: sticky;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .header-content {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
-}
-
-.site-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-}
-
-.subtitle {
-  margin: 0.2rem 0 0 0;
-  font-size: 0.95rem;
-  opacity: 0.95;
-  color: #D4A574;
+  align-items: center;
+  padding: 14px 24px;
 }
 
 .nav {
   display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  gap: 10px;
 }
 
-/* Top nav bubbles */
 .nav-bubble {
-  font-size: 1rem;
-  color: #fff;
-  font-weight: 500;
-  padding: 0.5rem 1.25rem;
+  background: rgba(255,255,255,0.15);
+  padding: 8px 16px;
   border-radius: 20px;
-  transition: all 0.2s ease;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-weight: 600;
 }
 
-.nav-bubble:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-1px);
-}
-
-/* ==================== HERO ==================== */
+/* ================= HERO ================= */
 
 .hero-welcome {
-  background: linear-gradient(135deg, #f5f2ed 0%, #faf8f5 100%);
-  padding: 3.5rem 0;
-  border-bottom: 3px solid #D4A574;
-}
-
-.hero-welcome h2 {
-  font-size: 2.5rem;
-  color: #003366;
-  margin: 0 0 1rem 0;
+  background: #f5f2ed;
+  padding: 60px 20px;
   text-align: center;
 }
 
-.hero-subtitle {
-  font-size: 1.2rem;
-  color: #444;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 2.5rem;
-  line-height: 1.6;
-}
-
-.features-badges {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.feature-badge {
-  background: #fff;
-  padding: 1rem 1.75rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #003366;
-  border: 2px solid #f0ede8;
-}
-
-/* ==================== LISTINGS ==================== */
+/* ================= LISTINGS ================= */
 
 .listings-section {
-  padding: 2rem 0 3rem;
+  padding: 40px 20px;
 }
 
 .property-card {
   display: flex;
   background: #fff;
-  border-radius: 8px;
+  margin-bottom: 20px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-  margin-bottom: 1.5rem;
-  border: 1px solid #e5e5e5;
-  cursor: pointer;
-}
-
-.property-card:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
-  transform: translateY(-2px);
-  transition: 0.2s ease;
+  border: 1px solid #ddd;
 }
 
 .property-images {
   width: 340px;
   min-width: 340px;
-  height: 255px;
-  background: #f0f0f0;
-  position: relative;
-  overflow: hidden;
+  height: 240px;
 }
 
-/* MAIN PAGE cover image */
 .cover-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* ==================== PROPERTY INFO ==================== */
-
 .property-info {
-  padding: 1.25rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  padding: 20px;
   flex: 1;
 }
 
 .property-title-card {
   font-size: 1.4rem;
-  font-weight: 700;
-  color: #003366;
-  margin: 0;
+  color: #0C234B;
+  margin-bottom: 10px;
 }
 
 .property-price {
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-size: 1.6rem;
   color: #CC0033;
-  line-height: 1.2;
-}
-
-.property-price span {
-  font-size: 1rem;
-  color: #666;
-  font-weight: 400;
-}
-
-.property-specs {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.95rem;
-  color: #444;
-}
-
-.spec {
-  font-weight: 500;
-}
-
-.property-address {
-  font-size: 1rem;
-  color: #333;
-  font-weight: 500;
-}
-
-.property-tags {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-top: 0.25rem;
+  font-weight: 700;
 }
 
 .tag {
-  background: #f0f7ff;
-  color: #003366;
-  padding: 0.35rem 0.75rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border: 1px solid #d4e6f7;
+  background: #e6f0ff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-right: 6px;
 }
 
-/* ==================== DETAIL PAGES ==================== */
+/* ================= ABOUT ================= */
 
-.detail-hero {
-  padding: 2.5rem 0 3rem;
-  background: linear-gradient(135deg, #f0ede8 0%, #faf8f5 100%);
-  border-bottom: 3px solid #D4A574;
+.about-section {
+  background: #fff;
+  padding: 50px 20px;
 }
 
-.detail-headline-row {
+.about-content {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.detail-title {
-  margin: 0;
-  font-size: 2.2rem;
-  color: #003366;
-}
-
-.detail-subtitle {
-  margin: 0.35rem 0 0 0;
-  color: #666;
-  font-size: 1.15rem;
-}
-
-/* Bubble style for "Back to Listings" */
-.back-bubble {
-  display: inline-flex;
+  gap: 40px;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.55rem 1rem;
-  border-radius: 20px;
-  background: rgba(0, 51, 102, 0.08);
-  border: 1.5px solid rgba(0, 51, 102, 0.2);
-  color: #003366;
+}
+
+.family-photo {
+  width: 300px;
+  border-radius: 14px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.contact-info {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-link {
+  background: #fff;
+  padding: 12px 20px;
+  border-radius: 25px;
   font-weight: 700;
-  white-space: nowrap;
+  color: #CC0033;
+  border: 2px solid #eee;
 }
 
-.back-bubble:hover {
-  background: rgba(0, 51, 102, 0.12);
-  border-color: rgba(0, 51, 102, 0.35);
-  transform: translateY(-1px);
+/* ================= FOOTER ================= */
+
+.site-footer {
+  background: #0C234B;
+  color: white;
+  padding: 30px;
+  text-align: center;
 }
 
-/* ==================== PHOTO SLIDER WIDGET ==================== */
+/* ================= DETAIL PAGE ================= */
 
 .gallery-carousel {
+  max-width: 900px;
+  margin: 40px auto;
   background: #fff;
+  padding: 20px;
   border-radius: 14px;
-  padding: 1.25rem;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
-  border: 2px solid #f0ede8;
-  margin-top: 1.5rem;
 }
 
 .carousel-image-wrapper {
-  width: 100%;
-  max-height: 520px;
-  height: 520px;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #f5f5f5;
+  height: 450px;
   position: relative;
 }
 
@@ -311,225 +180,30 @@ a:hover {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.25s ease;
 }
 
 .carousel-image-wrapper img.active {
   opacity: 1;
 }
 
-.carousel-caption {
-  margin: 1.1rem 0 0.8rem;
-  font-size: 1.1rem;
-  color: #444;
-  font-weight: 600;
-}
-
 .carousel-controls {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  margin-top: 15px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 0.9rem 2rem;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 1.05rem;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-  transition: all 0.2s ease;
-}
-
-.btn.primary {
-  background: #003366;
-  color: #fff;
-}
-
-.btn.primary:hover {
-  opacity: 0.95;
-  transform: translateY(-1px);
-}
-
-.btn.secondary {
-  background: #fff;
-  color: #003366;
-  border: 2px solid #003366;
-}
-
-.btn.secondary:hover {
-  background: #003366;
-  color: #fff;
-  transform: translateY(-1px);
-}
-
-/* ==================== ABOUT ==================== */
-
-.about-section {
-  background: #fff;
-  padding: 3rem 0;
-  border-top: 1px solid #eee;
-}
-
-.about-section h2 {
-  text-align: center;
-  margin: 0 0 2rem 0;
-  color: #003366;
-}
-
-.about-content {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.about-photo {
-  flex: 0 1 320px;
-}
-
-.family-photo {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 16px;
-  object-fit: cover;
-  border: 3px solid #f0ede8;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-}
-
-.about-text {
-  flex: 1 1 400px;
-}
-
-.about-text p {
-  margin: 0 0 1rem 0;
-  color: #444;
-  font-size: 1.05rem;
-}
-
-/* ==================== CONTACT ==================== */
-
-.contact-section {
-  background: #f9f9f9;
-  padding: 2.5rem 0;
-  border-top: 1px solid #e5e5e5;
-}
-
-.contact-section h2 {
-  margin: 0 0 1.5rem 0;
-  font-size: 1.75rem;
-  color: #003366;
-  text-align: center;
-}
-
-.contact-info {
-  display: flex;
-  gap: 1.25rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* BUBBLES are back */
-.contact-link {
-  font-size: 1.15rem;
-  color: #CC0033;
-  font-weight: 700;
-  padding: 0.75rem 1.5rem;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: all 0.2s ease;
-  border: 2px solid #f0f0f0;
-}
-
-.contact-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  border-color: #CC0033;
-}
-
-/* ==================== ZILLOW ==================== */
-
-.zillow-section {
-  background: #f9f9f9;
-  padding: 2rem 0;
-  border-top: 1px solid #e5e5e5;
-}
-
-.zillow-section h3 {
-  margin: 0 0 1.5rem 0;
-  font-size: 1.3rem;
-  color: #003366;
-  text-align: center;
-  font-weight: 700;
-}
-
-.zillow-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.zillow-btn {
-  background: #006AFF;
-  color: #fff;
-  padding: 0.9rem 1.75rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 700;
-  box-shadow: 0 2px 6px rgba(0, 106, 255, 0.2);
-}
-
-.zillow-btn:hover {
-  background: #0056d6;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 106, 255, 0.3);
-}
-
-/* ==================== FOOTER ==================== */
-
-.site-footer {
-  background: #003366;
-  color: #D4A574;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.site-footer p {
-  margin: 0;
-  font-size: 1.05rem;
-}
-
-/* ==================== RESPONSIVE ==================== */
+/* ================= FORCE DESKTOP ON MOBILE ================= */
 
 @media (max-width: 768px) {
   .property-card {
-    flex-direction: column;
-  }
-
-  .property-images {
-    width: 100%;
-    height: 240px;
-  }
-
-  .carousel-image-wrapper {
-    height: 320px;
-    max-height: 320px;
+    flex-direction: row;
   }
 
   .about-content {
-    flex-direction: column;
+    flex-direction: row;
   }
 
-  .carousel-controls {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
+  .contact-info {
+    flex-direction: row;
   }
 }
