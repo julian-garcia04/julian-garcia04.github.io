@@ -72,6 +72,7 @@ a:hover {
   flex-wrap: wrap;
 }
 
+/* Top nav bubbles */
 .nav-bubble {
   font-size: 1rem;
   color: #fff;
@@ -228,29 +229,26 @@ a:hover {
   background: #f0f7ff;
   color: #003366;
   padding: 0.35rem 0.75rem;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   border: 1px solid #d4e6f7;
 }
 
-/* ==================== DETAIL PAGE (SLIDER) ==================== */
+/* ==================== DETAIL PAGES ==================== */
 
 .detail-hero {
-  padding: 2.5rem 0;
+  padding: 2.5rem 0 3rem;
   background: linear-gradient(135deg, #f0ede8 0%, #faf8f5 100%);
   border-bottom: 3px solid #D4A574;
 }
 
-.back-link {
-  display: inline-block;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  color: #003366;
-}
-
-.back-link:hover {
-  text-decoration: underline;
+.detail-headline-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .detail-title {
@@ -260,30 +258,53 @@ a:hover {
 }
 
 .detail-subtitle {
-  margin: 0.25rem 0 0 0;
+  margin: 0.35rem 0 0 0;
   color: #666;
   font-size: 1.15rem;
 }
 
-/* Slider container on detail pages */
-.slider-wrap {
-  margin-top: 1.5rem;
-  border-radius: 14px;
-  overflow: hidden;
+/* Bubble style for "Back to Listings" */
+.back-bubble {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 1rem;
+  border-radius: 20px;
+  background: rgba(0, 51, 102, 0.08);
+  border: 1.5px solid rgba(0, 51, 102, 0.2);
+  color: #003366;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.back-bubble:hover {
+  background: rgba(0, 51, 102, 0.12);
+  border-color: rgba(0, 51, 102, 0.35);
+  transform: translateY(-1px);
+}
+
+/* ==================== PHOTO SLIDER WIDGET ==================== */
+
+.gallery-carousel {
   background: #fff;
-  border: 2px solid #f0ede8;
+  border-radius: 14px;
+  padding: 1.25rem;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f0ede8;
+  margin-top: 1.5rem;
 }
 
-.slider-stage {
-  position: relative;
+.carousel-image-wrapper {
   width: 100%;
+  max-height: 520px;
   height: 520px;
-  background: #f5f5f5;
   overflow: hidden;
+  border-radius: 12px;
+  background: #f5f5f5;
+  position: relative;
 }
 
-.slider-stage img {
+.carousel-image-wrapper img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -293,34 +314,55 @@ a:hover {
   transition: opacity 0.25s ease;
 }
 
-.slider-stage img.active {
+.carousel-image-wrapper img.active {
   opacity: 1;
 }
 
-.slider-controls {
+.carousel-caption {
+  margin: 1.1rem 0 0.8rem;
+  font-size: 1.1rem;
+  color: #444;
+  font-weight: 600;
+}
+
+.carousel-controls {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem;
-  background: #fff;
-  border-top: 1px solid #eee;
 }
 
-.slider-btn {
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: 700;
-  padding: 0.8rem 1.25rem;
-  border-radius: 10px;
-  background: #003366;
-  color: #fff;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  font-family: inherit;
+  transition: all 0.2s ease;
 }
 
-.slider-btn:hover {
-  transform: translateY(-1px);
+.btn.primary {
+  background: #003366;
+  color: #fff;
+}
+
+.btn.primary:hover {
   opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.btn.secondary {
+  background: #fff;
+  color: #003366;
+  border: 2px solid #003366;
+}
+
+.btn.secondary:hover {
+  background: #003366;
+  color: #fff;
+  transform: translateY(-1px);
 }
 
 /* ==================== ABOUT ==================== */
@@ -384,19 +426,21 @@ a:hover {
 
 .contact-info {
   display: flex;
-  gap: 2rem;
+  gap: 1.25rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+/* BUBBLES are back */
 .contact-link {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: #CC0033;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0.75rem 1.5rem;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
   border: 2px solid #f0f0f0;
 }
 
@@ -419,7 +463,7 @@ a:hover {
   font-size: 1.3rem;
   color: #003366;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .zillow-links {
@@ -433,9 +477,9 @@ a:hover {
   background: #006AFF;
   color: #fff;
   padding: 0.9rem 1.75rem;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   box-shadow: 0 2px 6px rgba(0, 106, 255, 0.2);
 }
 
@@ -471,11 +515,21 @@ a:hover {
     height: 240px;
   }
 
-  .slider-stage {
+  .carousel-image-wrapper {
     height: 320px;
+    max-height: 320px;
   }
 
   .about-content {
     flex-direction: column;
+  }
+
+  .carousel-controls {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 }
