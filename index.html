@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Wildcat Family Housing – UA Student Rentals in Tucson</title>
+  <title>My Wildcat Home – UA Student Rentals in Tucson</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
     content="Safe, comfortable homes for University of Arizona students. Family-owned and operated. Individual leases, utilities included."
   />
+  <meta property="og:title" content="My Wildcat Home – UA Student Rentals in Tucson" />
+  <meta property="og:description" content="Safe, comfortable homes for University of Arizona students. Family-owned and operated. Individual leases, utilities included." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Raleway:wght@700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -18,9 +21,12 @@
   <!-- Header -->
   <header class="site-header">
     <div class="header-content">
-      <div>
-        <h1><a href="index.html" style="color:inherit;">My Wildcat Home</a></h1>
-        <p class="subtitle">Leasing Academic Year 2026–2027</p>
+      <div class="header-brand">
+        <img src="images/wildcatLogo.jpg" alt="University of Arizona Wildcat" class="ua-logo" />
+        <div>
+          <h1><a href="index.html" style="color:inherit;">My Wildcat Home</a></h1>
+          <p class="subtitle">Leasing Academic Year 2026–2027</p>
+        </div>
       </div>
       <nav class="nav">
         <a href="#about" class="nav-bubble">About</a>
@@ -127,13 +133,13 @@
       <p class="section-label">About Us</p>
       <h2 class="section-title">A UA Family, For UA Families</h2>
       <div class="about-text">
-        <p>We are a Tucson family and have had 2 Wildcats graduate from the University of Arizona. We know what it's like to send your kid off to school and wish for safe and low maintenance housing.</p>
+        <p>As a Phoenix family who has proudly sent two Wildcats through the University of Arizona, we understand firsthand what it means to want safe, comfortable, and worry-free housing for your student. We will be just one call away!</p>
       </div>
     </div>
   </section>
 
   <!-- Contact / Info Footer -->
-  <section id="contact" class="info-footer">
+  <section class="info-footer">
     <div class="info-footer-wrap">
 
       <div class="info-col">
@@ -173,6 +179,11 @@
 
   <!-- Floating Call Button -->
   <a href="tel:14803041067" class="floating-cta">Call Now</a>
+
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+  </script>
 
 </body>
 </html>
