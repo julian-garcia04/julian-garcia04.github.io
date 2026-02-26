@@ -401,6 +401,51 @@ a { text-decoration: none; }
 .about-text p { margin: 0 0 16px; }
 .about-text p:last-child { margin-bottom: 0; }
 
+/* ===== WHAT'S INCLUDED ===== */
+
+.included-section {
+  background: #fff;
+  padding: 68px 28px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.included-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.included-wrap .section-title {
+  margin-bottom: 32px;
+}
+
+.included-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.included-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #eef2ff;
+  border: 1px solid #dde5ff;
+  color: #3b4a9b;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.inc-check {
+  color: var(--red);
+  font-weight: 900;
+  font-size: 0.85rem;
+}
+
 /* ===== INFO FOOTER ===== */
 
 .info-footer {
