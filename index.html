@@ -8,16 +8,19 @@
     name="description"
     content="Safe, comfortable homes for University of Arizona students. Family-owned and operated. Individual leases, utilities included."
   />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Header -->
   <header class="site-header">
-    <div class="container header-content">
+    <div class="header-content">
       <div>
-        <h1>My Wildcat Home</h1>
-        <p class="subtitle">Now Leasing Academic Year 2026-2027</p>
+        <h1><a href="index.html" style="color:inherit;">My Wildcat Home</a></h1>
+        <p class="subtitle">Leasing Academic Year 2026–2027</p>
       </div>
       <nav class="nav">
         <a href="#about" class="nav-bubble">About</a>
@@ -28,44 +31,51 @@
 
   <!-- Hero -->
   <section class="hero-welcome">
-    <div class="container">
-      <h2>Welcome, Wildcat Families</h2>
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <h2>Your Home Away From Home</h2>
       <p class="hero-subtitle">
-        Premium, Fully Furnished Homes Just Steps From the University of Arizona
+        Premium, fully furnished rooms steps from the University of Arizona —
+        utilities included, individual leases, no hassle.
       </p>
+      <div class="hero-ctas">
+        <a href="#listings" class="btn-hero-primary">View Available Rooms</a>
+        <a href="tel:14803041067" class="btn-hero-secondary">Call Us</a>
+      </div>
     </div>
   </section>
 
   <!-- Listings -->
-  <section class="listings-section">
-    <div class="container">
+  <section id="listings" class="listings-section">
+    <div class="listings-grid">
 
       <!-- 1229 N Fourth Ave -->
       <a href="1229-fourth-ave.html" class="property-card">
         <div class="property-images">
           <img
             src="images/4thAve/front.jpg"
-            alt="1229 N Fourth Ave - Front of house"
+            alt="1229 N Fourth Ave – Front of house"
             class="cover-image"
           />
+          <div class="property-images-overlay"></div>
         </div>
-
         <div class="property-info">
           <h3 class="property-title-card">1229 N Fourth Ave</h3>
-          <div class="availability-tag">3 Rooms Available</div>
-
+          <div class="availability-tag">4 Rooms Available</div>
           <div class="property-price">$1,050<span>/room/mo</span></div>
           <div class="property-specs">
             <span class="spec">4 Beds</span>
             <span class="spec">2 Baths</span>
+            <span class="spec">1,614 sqft</span>
           </div>
-          <div class="property-address">Tucson, AZ 85705</div>
+          <div class="property-address">Tucson, AZ 85705 &nbsp;&middot;&nbsp; 5 min bike to UA</div>
           <div class="property-tags">
             <span class="tag">WiFi/Utilities Included</span>
             <span class="tag">Individual Leases</span>
-            <span class="tag">Gated Backyard</span>
-            <span class="tag">Car Parking</span>
+            <span class="tag">Fully Furnished</span>
+            <span class="tag">Washer &amp; Dryer</span>
           </div>
+          <span class="card-cta">View Photos &amp; Details &rarr;</span>
         </div>
       </a>
 
@@ -74,65 +84,76 @@
         <div class="property-images">
           <img
             src="images/Speedway/frontHouse.jpg"
-            alt="525 E Speedway Blvd - Front of house"
+            alt="525 E Speedway Blvd – Front of house"
             class="cover-image"
           />
+          <div class="property-images-overlay"></div>
         </div>
-
         <div class="property-info">
           <h3 class="property-title-card">525 E Speedway Blvd</h3>
-          <div class="availability-tag">2 Rooms Available</div>
-
+          <div class="availability-tag">1 Room Available</div>
           <div class="property-price">$1,000<span>/room/mo</span></div>
           <div class="property-specs">
             <span class="spec">4 Beds</span>
             <span class="spec">2 Baths</span>
+            <span class="spec">1,685 sqft</span>
           </div>
-          <div class="property-address">Tucson, AZ 85705</div>
+          <div class="property-address">Tucson, AZ 85705 &nbsp;&middot;&nbsp; Walk to UA campus</div>
           <div class="property-tags">
             <span class="tag">WiFi/Utilities Included</span>
             <span class="tag">Individual Leases</span>
-            <span class="tag">Gated Backyard</span>
-            <span class="tag">Car Parking</span>
+            <span class="tag">Fully Furnished</span>
+            <span class="tag">Carport Parking</span>
           </div>
+          <span class="card-cta">View Photos &amp; Details &rarr;</span>
         </div>
       </a>
 
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- About -->
+  <section id="about" class="about-section">
+    <div class="about-wrap">
+      <p class="section-label">About Us</p>
+      <h2 class="section-title">A UA Family, For UA Families</h2>
+      <div class="about-text">
+        <p>We are a Tucson family and have had 2 Wildcats graduate from the University of Arizona. We know what it's like to send your kid off to school and hope they end up somewhere decent.</p>
+        <p>We are dedicated to providing premium housing to students. Our homes are kept up, fully furnished, and close to campus. Everything is included — WiFi, utilities, washer and dryer. Each student signs their own lease, so your child is only responsible for their own rent.</p>
+        <p>We pick up the phone. If something needs fixing, we take care of it. Come take a look before you decide — we're happy to show you around.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Info Footer -->
   <section id="contact" class="info-footer">
     <div class="info-footer-wrap">
 
       <div class="info-col">
         <h2>Contact Us</h2>
         <div class="contact-info">
-          <a href="tel:14803041067" class="contact-link">Call</a>
-          <a href="mailto:carmelag7@hotmail.com" class="contact-link">Email</a>
+          <a href="tel:14803041067" class="contact-link">Call or Text</a>
+          <a href="mailto:carmelag7@hotmail.com" class="contact-link">Email Us</a>
         </div>
       </div>
 
       <div class="info-col">
-        <h2>View Full Listings on Zillow</h2>
+        <h2>View on Zillow</h2>
         <div class="zillow-links">
           <a href="https://www.zillow.com/homedetails/1229-N-4th-Ave-Tucson-AZ-85705/8475970_zpid/"
-             target="_blank" class="zillow-btn">
-            1229 N Fourth Ave on Zillow
+             target="_blank" rel="noopener" class="zillow-btn">
+            1229 N Fourth Ave
           </a>
-
           <a href="https://www.zillow.com/homedetails/525-E-Speedway-Blvd-Tucson-AZ-85705/8476029_zpid/"
-             target="_blank" class="zillow-btn">
-            525 E Speedway Blvd on Zillow
+             target="_blank" rel="noopener" class="zillow-btn">
+            525 E Speedway Blvd
           </a>
         </div>
       </div>
 
       <div class="info-col">
-        <h2>Schedule a Showing</h2>
-        <div class="schedule-wrap">
-          <a href="tel:14803041067" class="schedule-btn">Schedule a Tour</a>
-        </div>
+        <h2>Schedule a Tour</h2>
+        <a href="tel:14803041067" class="schedule-btn">Book a Showing</a>
       </div>
 
     </div>
@@ -140,10 +161,11 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 My Wildcat Home · Family-Owned & Operated</p>
-    </div>
+    <p>&copy; 2025 My Wildcat Home &middot; Family-Owned &amp; Operated</p>
   </footer>
+
+  <!-- Floating Call Button -->
+  <a href="tel:14803041067" class="floating-cta">Call Now</a>
 
 </body>
 </html>

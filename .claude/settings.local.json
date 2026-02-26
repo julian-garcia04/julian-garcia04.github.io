@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.redfin.com)",
+      "WebFetch(domain:www.zillow.com)",
+      "WebFetch(domain:www.homes.com)",
+      "WebFetch(domain:www.trulia.com)"
+    ]
+  }
+}

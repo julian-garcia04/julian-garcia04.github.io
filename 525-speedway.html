@@ -4,15 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>525 E Speedway Blvd – My Wildcat Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header class="site-header">
-    <div class="container header-content">
+    <div class="header-content">
       <div>
-        <h1>My Wildcat Home</h1>
-        <p class="subtitle">Welcome Wildcats</p>
+        <h1><a href="index.html" style="color:inherit;">My Wildcat Home</a></h1>
+        <p class="subtitle">Leasing Academic Year 2026–2027</p>
       </div>
       <nav class="nav">
         <a href="index.html#about" class="nav-bubble">About</a>
@@ -21,54 +24,195 @@
     </div>
   </header>
 
-  <section class="detail-hero">
-    <div class="container">
+  <section class="detail-page">
+    <div class="detail-grid">
 
-      <div class="detail-headline-row">
-        <div>
-          <h2 class="detail-title">525 E Speedway Blvd</h2>
-          <p class="detail-subtitle">Tucson, AZ 85705 • 4 Beds • 2 Baths • $1,000/room/mo</p>
+      <!-- LEFT: Photo Gallery -->
+      <div class="detail-gallery">
+        <div class="detail-nav-row">
+          <a class="back-bubble" href="index.html">&larr; Back to Listings</a>
         </div>
 
-        <a class="back-bubble" href="index.html">← Back to Listings</a>
+        <div class="slider-card" aria-label="Property photos">
+          <div class="slider-track">
+            <img src="images/Speedway/frontHouse.jpg"        alt="Front of house" />
+            <img src="images/Speedway/livingRoom.jpg"        alt="Living room" />
+            <img src="images/Speedway/kitchen.jpg"           alt="Kitchen" />
+            <img src="images/Speedway/kitchen2.jpg"          alt="Kitchen view 2" />
+            <img src="images/Speedway/2ndbedroom.jpg"        alt="Bedroom" />
+            <img src="images/Speedway/bathroomJackNJill.jpg" alt="Jack and Jill bathroom" />
+            <img src="images/Speedway/jacknjillshower.jpg"   alt="Jack and Jill shower" />
+            <img src="images/Speedway/mainbathroom.jpg"      alt="Main bathroom" />
+            <img src="images/Speedway/3rdBathroom.jpg"       alt="3rd bathroom" />
+            <img src="images/Speedway/carPort.jpg"           alt="Carport parking" />
+          </div>
+          <button class="slider-btn left" type="button" aria-label="Previous photo" onclick="slideGallery(-1)">&#8249;</button>
+          <button class="slider-btn right" type="button" aria-label="Next photo" onclick="slideGallery(1)">&#8250;</button>
+          <div class="slider-counter" aria-live="polite">
+            <span id="slideCurrent">1</span> / <span id="slideTotal">10</span>
+          </div>
+        </div>
       </div>
 
-      <!-- Photo Slider Gallery Widget -->
-      <div class="gallery-carousel" data-gallery="speedway">
-        <div class="carousel-image-wrapper">
-          <img src="images/Speedway/frontHouse.jpg" alt="Front" class="active" />
-          <!-- Add more Speedway images below as you get them -->
-          <!-- <img src="images/Speedway/livingRoom.webp" alt="Living room" /> -->
+      <!-- RIGHT: Info Panel -->
+      <div class="detail-panel">
+
+        <div class="availability-tag">1 Room Available</div>
+
+        <h1 class="detail-panel-title">525 E Speedway Blvd</h1>
+        <p class="detail-panel-address">Tucson, AZ 85705 &nbsp;&middot;&nbsp; Feldman's Neighborhood</p>
+
+        <div class="detail-panel-price">$1,000<span>/room/mo</span></div>
+
+        <div class="detail-quick-stats">
+          <div class="quick-stat">
+            <span class="qs-value">4</span>
+            <span class="qs-label">Beds</span>
+          </div>
+          <div class="quick-stat">
+            <span class="qs-value">2</span>
+            <span class="qs-label">Baths</span>
+          </div>
+          <div class="quick-stat">
+            <span class="qs-value">1,685</span>
+            <span class="qs-label">Sq Ft</span>
+          </div>
         </div>
 
-        <div class="carousel-controls">
-          <button class="btn secondary" onclick="changeGallerySlide('speedway', -1)">← Prev</button>
-          <button class="btn primary" onclick="changeGallerySlide('speedway', 1)">Next →</button>
+        <hr class="detail-divider" />
+
+        <p class="detail-panel-desc">
+          Your Wildcat can walk or bike to campus in minutes — no car needed.
+          Every room comes fully furnished with a bed frame, desk, and dresser.
+          Rent covers everything: WiFi, all utilities, washer &amp; dryer, and all kitchen appliances.
+          Just move in and focus on school.
+        </p>
+
+        <hr class="detail-divider" />
+
+        <div class="detail-tags">
+          <span class="detail-tag">WiFi Included</span>
+          <span class="detail-tag">All Utilities Included</span>
+          <span class="detail-tag">Fully Furnished</span>
+          <span class="detail-tag">Bed, Desk &amp; Dresser</span>
+          <span class="detail-tag">Washer &amp; Dryer</span>
+          <span class="detail-tag">All Appliances</span>
+          <span class="detail-tag">Carport Parking</span>
+          <span class="detail-tag">Gated Backyard</span>
+          <span class="detail-tag">Individual Lease</span>
+          <span class="detail-tag">Central A/C</span>
+          <span class="detail-tag">Fireplace</span>
+          <span class="detail-tag">Ramada/Patio</span>
+          <span class="detail-tag">Walk to UA</span>
+          <span class="detail-tag">Smoke-Free</span>
         </div>
+
+        <hr class="detail-divider" />
+
+        <div class="map-embed">
+          <iframe
+            src="https://maps.google.com/maps?q=525+E+Speedway+Blvd,+Tucson,+AZ+85705&output=embed&z=15"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="525 E Speedway Blvd location map"
+            aria-label="Map showing 525 E Speedway Blvd location"
+          ></iframe>
+        </div>
+
+        <div class="detail-actions">
+          <a href="tel:14803041067" class="btn-call">Schedule a Tour</a>
+          <a href="mailto:carmelag7@hotmail.com" class="btn-email">Send an Email</a>
+          <a href="https://www.zillow.com/homedetails/525-E-Speedway-Blvd-Tucson-AZ-85705/8476029_zpid/"
+             target="_blank" rel="noopener" class="zillow-ref">View on Zillow &rarr;</a>
+        </div>
+
       </div>
-
-      <!-- Add your rent options and property info below later -->
-
     </div>
   </section>
 
+  <footer class="site-footer">
+    <p>&copy; 2025 My Wildcat Home &middot; Family-Owned &amp; Operated</p>
+  </footer>
+
+  <a href="tel:14803041067" class="floating-cta">Call Now</a>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo fullscreen view">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
   <script>
-    const galleries = {
-      speedway: {
-        index: 0,
-        images: document.querySelectorAll('[data-gallery="speedway"] .carousel-image-wrapper img')
-      }
-    };
+    let slideIndex = 0;
+    const track  = document.querySelector(".slider-track");
+    const slides = document.querySelectorAll(".slider-track img");
+    const total  = slides.length;
+    const currentEl = document.getElementById("slideCurrent");
+    const totalEl   = document.getElementById("slideTotal");
+    if (totalEl) totalEl.textContent = total;
 
-    function changeGallerySlide(key, direction) {
-      const g = galleries[key];
-      const imgs = g.images;
-      if (!imgs || imgs.length <= 1) return;
-
-      imgs[g.index].classList.remove('active');
-      g.index = (g.index + direction + imgs.length) % imgs.length;
-      imgs[g.index].classList.add('active');
+    function updateCounter() {
+      if (currentEl) currentEl.textContent = String(slideIndex + 1);
     }
+
+    function slideGallery(dir) {
+      if (!track || total <= 1) return;
+      slideIndex += dir;
+      if (slideIndex < 0)      slideIndex = total - 1;
+      if (slideIndex >= total) slideIndex = 0;
+      track.style.transform = `translateX(-${slideIndex * 100}%)`;
+      updateCounter();
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft")  slideGallery(-1);
+      if (e.key === "ArrowRight") slideGallery(1);
+    });
+
+    // Touch swipe — track whether it was a real swipe to prevent lightbox triggering
+    let touchStartX = 0;
+    let didSwipe = false;
+    track.addEventListener("touchstart", (e) => {
+      touchStartX = e.touches[0].clientX;
+      didSwipe = false;
+    }, { passive: true });
+    track.addEventListener("touchend", (e) => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) { didSwipe = true; slideGallery(diff > 0 ? 1 : -1); }
+    }, { passive: true });
+
+    updateCounter();
+
+    // Lightbox
+    const lightbox    = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+
+    slides.forEach((img) => {
+      img.style.cursor = "zoom-in";
+      img.addEventListener("click", () => {
+        if (didSwipe) { didSwipe = false; return; }
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add("active");
+        const scrollY = window.scrollY;
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${scrollY}px`;
+        document.body.style.width = "100%";
+      });
+    });
+
+    function closeLightbox() {
+      const scrollY = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      lightbox.classList.remove("active");
+    }
+
+    document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
   </script>
 
 </body>
