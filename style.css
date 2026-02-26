@@ -25,7 +25,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.65;
-  padding-bottom: 80px;
+  padding-bottom: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -53,9 +53,7 @@ a { text-decoration: none; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 28px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 12px 24px 12px 10px;
   gap: 16px;
 }
 
@@ -126,7 +124,7 @@ a { text-decoration: none; }
   background: var(--navy-dark);
   overflow: hidden;
   text-align: center;
-  padding: 72px 24px 58px;
+  padding: 44px 24px 36px;
 }
 
 .hero-bg {
@@ -565,7 +563,7 @@ a { text-decoration: none; }
 .site-footer {
   background: var(--navy-dark);
   color: rgba(255,255,255,0.32);
-  padding: 22px 28px;
+  padding: 22px 28px 90px;
   text-align: center;
   font-size: 0.84rem;
   letter-spacing: 0.2px;
@@ -1173,7 +1171,7 @@ a { text-decoration: none; }
   .hero-logo { width: 110px; margin-bottom: 16px; }
   .ua-logo { height: 36px; }
   .site-header h1 { font-size: 1rem; letter-spacing: 1.5px; }
-  .hero-welcome { padding: 52px 20px 44px; }
+  .hero-welcome { padding: 32px 20px 28px; }
   .hero-welcome h2 { font-size: 1.85rem; letter-spacing: -0.5px; }
   .hero-subtitle { font-size: 0.98rem; }
 
