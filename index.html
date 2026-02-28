@@ -32,7 +32,8 @@
         </div>
       </div>
       <nav class="nav">
-        <a href="#about" class="nav-bubble">About</a>
+        <a href="#contact" class="nav-bubble">Contact</a>
+        <a href="tel:14803041067" class="nav-call">Call Us</a>
       </nav>
     </div>
   </header>
@@ -41,18 +42,37 @@
   <section class="hero-welcome">
     <div class="hero-bg"></div>
     <div class="hero-inner">
-      <h2>Your Home Away From Home</h2>
+      <h2>Furnished Homes<br>Near Campus.</h2>
       <p class="hero-subtitle">
-        Premium, fully furnished homes steps from the Campus
+        A Wildcat family providing fully furnished homes walking distance from campus. Everything your Wildcat needs, included in one flat monthly rate.
       </p>
-      <div class="hero-ctas">
-        <a href="tel:14803041067" class="btn-hero-primary">Contact Us</a>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hs-value">2</span>
+          <span class="hs-label">Properties</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hs-value">5 min</span>
+          <span class="hs-label">To UA Campus</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hs-value">$1,000</span>
+          <span class="hs-label">Rent</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hs-value">Family</span>
+          <span class="hs-label">Owned</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Listings -->
   <section id="listings" class="listings-section">
+    <div class="listings-header">
+      <p class="section-label">Available Now</p>
+      <h2 class="section-title">Our Properties</h2>
+    </div>
     <div class="listings-grid">
 
       <!-- 1229 N Fourth Ave -->
@@ -62,13 +82,15 @@
             src="images/4thAve/front.jpg"
             alt="1229 N Fourth Ave – Front of house"
             class="cover-image"
+            loading="lazy"
           />
           <div class="property-images-overlay"></div>
         </div>
         <div class="property-info">
           <h3 class="property-title-card">1229 N Fourth Ave</h3>
-          <div class="availability-tag">4 Rooms Available</div>
-          <div class="property-price">$1,050<span>/room/mo</span></div>
+          <div class="availability-tag tag-open">4 Rooms Available</div>
+          <div class="property-price">$1,000<span>/room/mo</span></div>
+          <p class="price-note">Utilities, WiFi &amp; furnishings included</p>
           <div class="property-specs">
             <span class="spec">4 Beds</span>
             <span class="spec">2 Baths</span>
@@ -86,13 +108,15 @@
             src="images/Speedway/frontHouse.jpg"
             alt="525 E Speedway Blvd – Front of house"
             class="cover-image"
+            loading="lazy"
           />
           <div class="property-images-overlay"></div>
         </div>
         <div class="property-info">
           <h3 class="property-title-card">525 E Speedway Blvd</h3>
-          <div class="availability-tag">1 Room Available</div>
+          <div class="availability-tag tag-limited">1 Room Available</div>
           <div class="property-price">$1,000<span>/room/mo</span></div>
+          <p class="price-note">Utilities, WiFi &amp; furnishings included</p>
           <div class="property-specs">
             <span class="spec">4 Beds</span>
             <span class="spec">2 Baths</span>
@@ -126,22 +150,16 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="about-section">
-    <div class="about-wrap">
-      <h2 class="section-title">About Us</h2>
-      <div class="about-text">
-        <p>We are proud UA parents to 3 Wildcats. We have been Tucson landlords since 2019, and understand what it means to want safe, comfortable and worry-free housing for your Wildcat. We are just one call away!</p>
-      </div>
-    </div>
-  </section>
 
   <!-- Contact / Info Footer -->
-  <section class="info-footer">
+  <section id="contact" class="info-footer">
+    <div class="contact-section-header">
+      <h2 class="section-title section-title-light">Contact Us</h2>
+    </div>
     <div class="info-footer-wrap">
 
       <div class="info-col">
-        <h2>Contact Us</h2>
+        <h2>Reach Us Directly</h2>
         <div class="contact-info">
           <a href="tel:14803041067" class="contact-link">Call or Text</a>
           <a href="mailto:carmelag7@hotmail.com" class="contact-link">Email Us</a>
@@ -172,11 +190,13 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <p>&copy; 2025 My Wildcat Home &middot; Family-Owned &amp; Operated</p>
+    <div class="footer-contact">
+      <a href="tel:14803041067" class="footer-contact-link">Phone: 480-304-1067</a>
+      <span class="footer-divider">&middot;</span>
+      <a href="mailto:carmelag7@hotmail.com" class="footer-contact-link">Email: carmelag7@hotmail.com</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 My Wildcat Home &middot; Family-Owned &amp; Operated &middot; Tucson, AZ</p>
   </footer>
-
-  <!-- Floating Call Button -->
-  <a href="tel:14803041067" class="floating-cta">Call Now</a>
 
   <script>
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';

@@ -30,10 +30,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-::selection {
-  background: var(--navy);
-  color: #fff;
-}
 
 img { max-width: 100%; display: block; }
 a { text-decoration: none; }
@@ -110,6 +106,11 @@ a { text-decoration: none; }
   border: 1px solid rgba(255,255,255,0.16);
   transition: background 0.18s, color 0.18s;
   letter-spacing: 0.1px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-bubble:hover {
@@ -236,9 +237,13 @@ a { text-decoration: none; }
   color: inherit;
 }
 
-.property-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 50px rgba(0,0,0,0.12);
+@media (hover: hover) and (pointer: fine) {
+  .property-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.12);
+  }
+  .property-card:hover .cover-image { transform: scale(1.04); }
+  .property-card:hover .card-cta { background: var(--navy-dark); }
 }
 
 .property-images {
@@ -255,8 +260,6 @@ a { text-decoration: none; }
   object-fit: cover;
   transition: transform 0.5s ease;
 }
-
-.property-card:hover .cover-image { transform: scale(1.04); }
 
 .property-images-overlay {
   position: absolute;
@@ -362,8 +365,6 @@ a { text-decoration: none; }
   transition: background 0.18s;
   letter-spacing: 0.2px;
 }
-
-.property-card:hover .card-cta { background: var(--navy-dark); }
 
 /* ===== ABOUT ===== */
 
@@ -474,7 +475,7 @@ a { text-decoration: none; }
 .info-footer {
   background: var(--navy);
   color: #fff;
-  padding: 72px 28px;
+  padding: 48px 28px 72px;
 }
 
 .info-footer-wrap {
@@ -563,11 +564,29 @@ a { text-decoration: none; }
 .site-footer {
   background: var(--navy-dark);
   color: rgba(255,255,255,0.32);
-  padding: 22px 28px 90px;
+  padding: 28px 28px 36px;
   text-align: center;
   font-size: 0.84rem;
   letter-spacing: 0.2px;
 }
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.footer-contact-link {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.18s;
+}
+.footer-contact-link:hover { color: #fff; }
+.footer-divider { color: rgba(255,255,255,0.25); }
+.footer-copy { margin: 0; }
 
 /* ===== FLOATING CTA ===== */
 
@@ -596,6 +615,153 @@ a { text-decoration: none; }
 .floating-cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 36px rgba(204,0,51,0.6);
+}
+
+/* ===== NAV CALL BUTTON ===== */
+
+.nav-call {
+  background: var(--red);
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.86rem;
+  box-shadow: 0 4px 14px rgba(204,0,51,0.36);
+  transition: transform 0.18s, box-shadow 0.18s;
+  letter-spacing: 0.1px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-call:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(204,0,51,0.48);
+}
+
+/* ===== HERO STATS BAR ===== */
+
+.hero-stats {
+  display: flex;
+  margin: 28px auto 0;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  max-width: 560px;
+}
+
+.hero-stat {
+  flex: 1;
+  padding: 16px 10px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-stat:last-child { border-right: none; }
+
+.hs-value {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.3px;
+}
+
+.hs-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 5px;
+}
+
+/* ===== LISTINGS HEADER ===== */
+
+.listings-header {
+  margin-bottom: 32px;
+}
+
+/* ===== PRICE NOTE ===== */
+
+.price-note {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: -4px 0 0;
+  font-weight: 500;
+}
+
+/* ===== AVAILABILITY TAG VARIANTS ===== */
+
+.availability-tag.tag-open {
+  background: #16a34a;
+  box-shadow: 0 3px 10px rgba(22,163,74,0.28);
+}
+
+.availability-tag.tag-limited {
+  background: #d97706;
+  box-shadow: 0 3px 10px rgba(217,119,6,0.28);
+}
+
+/* ===== WHY US SECTION ===== */
+
+.why-us-section {
+  background: var(--navy);
+  padding: 56px 28px 48px;
+}
+
+.why-us-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label-light {
+  color: rgba(255,255,255,0.5);
+}
+
+.section-title-light {
+  color: #fff;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.why-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.why-card-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: -0.2px;
+}
+
+.why-card-desc {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ===== CONTACT SECTION HEADER ===== */
+
+.contact-section-header {
+  max-width: 1100px;
+  margin: 0 auto 44px;
 }
 
 /* ===== DETAIL PAGE SHARED ===== */
@@ -650,6 +816,9 @@ a { text-decoration: none; }
   white-space: nowrap;
   transition: background 0.18s, border-color 0.18s;
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  min-height: 44px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .back-bubble:hover {
@@ -956,7 +1125,7 @@ a { text-decoration: none; }
 
 .qs-label {
   display: block;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--muted);
   text-transform: uppercase;
@@ -1178,6 +1347,14 @@ a { text-decoration: none; }
   .listings-section { padding: 32px 18px 40px; }
   .listings-grid { grid-template-columns: 1fr; }
 
+  .hero-stats { max-width: 100%; margin-top: 24px; }
+  .hs-value { font-size: 1rem; }
+
+  .why-us-section { padding: 48px 20px; }
+  .why-us-grid { grid-template-columns: 1fr; }
+
+  .contact-section-header { margin-bottom: 28px; }
+
   .about-section { padding: 48px 20px; }
   .about-content { flex-direction: column; }
   .family-photo { width: 100%; }
@@ -1206,4 +1383,40 @@ a { text-decoration: none; }
   .detail-quick-stats { grid-template-columns: repeat(3, 1fr); }
   .detail-panel-title { font-size: 1.3rem; }
   .detail-panel-price { font-size: 1.7rem; }
+}
+
+/* ===== TOUCH-FRIENDLY INTERACTIVE ELEMENTS ===== */
+
+.property-card,
+.contact-link,
+.zillow-btn,
+.schedule-btn,
+.btn-email,
+.zillow-ref,
+.card-cta,
+.footer-contact-link {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ===== VERY SMALL PHONES (≤390px) ===== */
+
+@media (max-width: 390px) {
+  .nav-bubble,
+  .nav-call {
+    font-size: 0.78rem;
+    padding: 7px 12px;
+  }
+  .hs-label,
+  .qs-label {
+    font-size: 0.72rem;
+  }
+  .hs-value,
+  .qs-value {
+    font-size: 1rem;
+  }
+  .site-header h1 {
+    font-size: 0.92rem;
+    letter-spacing: 1px;
+  }
 }
