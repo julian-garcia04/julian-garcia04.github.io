@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1200" />
+  <title>Preview Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Raleway:wght@800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      background: #0C234B;
+    }
+
+    .card {
+      width: 1200px;
+      height: 630px;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Right photo panel */
+    .photo-panel {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 52%;
+      height: 100%;
+    }
+    .photo-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Gradient fade from navy into the photo */
+    .photo-panel::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, #0C234B 0%, rgba(12,35,75,0.55) 55%, rgba(12,35,75,0.15) 100%);
+      z-index: 1;
+    }
+    /* Dark vignette on right edge */
+    .photo-panel::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);
+      z-index: 1;
+    }
+
+    /* Left content */
+    .content {
+      position: relative;
+      z-index: 2;
+      width: 58%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 52px 56px 48px;
+    }
+
+    /* Top: logo + site name */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .brand img {
+      height: 58px;
+      width: auto;
+    }
+    .brand-text h1 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 900;
+      font-size: 1.45rem;
+      color: #ffffff;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+    .brand-text p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    /* Middle: headline */
+    .headline {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+      padding: 24px 0 8px;
+    }
+    .headline h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 900;
+      font-size: 3.1rem;
+      color: #ffffff;
+      line-height: 1.05;
+      letter-spacing: -1px;
+    }
+    .headline h2 span {
+      color: #CC0033;
+    }
+    .headline p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.5;
+      max-width: 420px;
+    }
+
+    /* Pills row */
+    .pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+    .pill {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 999px;
+      letter-spacing: 0.3px;
+    }
+    .pill.accent {
+      background: #CC0033;
+      border-color: #CC0033;
+    }
+
+    /* Bottom: URL */
+    .bottom {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .bottom-divider {
+      width: 32px;
+      height: 2px;
+      background: #CC0033;
+      border-radius: 2px;
+    }
+    .bottom p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="photo-panel">
+      <img src="images/Speedway/frontHouse.jpg" alt="House" />
+    </div>
+
+    <div class="content">
+
+      <div class="brand">
+        <img src="images/4thAve/topLeftLogo.png" alt="Wildcat Logo" />
+        <div class="brand-text">
+          <h1>My Wildcat Home</h1>
+          <p>Leasing Academic Year 2026–2027</p>
+        </div>
+      </div>
+
+      <div class="headline">
+        <h2>Student Homes<br>Near <span>U of A</span></h2>
+        <p>Family-owned 4-bedroom homes in Feldman's Historic Neighborhood, Tucson, AZ.</p>
+        <div class="pills">
+          <span class="pill accent">Rooms from $1,000/mo</span>
+          <span class="pill">All Utilities Included</span>
+          <span class="pill">Fully Furnished</span>
+          <span class="pill">Individual Leases</span>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div class="bottom-divider"></div>
+        <p>julian-garcia04.github.io</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

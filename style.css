@@ -1338,6 +1338,36 @@ a { text-decoration: none; }
 
 /* ===== RESPONSIVE ===== */
 
+/* Desktop: info panel on top, carousel below */
+@media (min-width: 921px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .detail-panel {
+    order: -1;
+    position: static;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 48px;
+    row-gap: 12px;
+    align-items: start;
+  }
+  .detail-panel .detail-panel-desc {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    align-self: start;
+  }
+  .detail-panel > .detail-divider:first-of-type {
+    display: none;
+  }
+  .detail-panel > .detail-divider,
+  .detail-panel .detail-tags,
+  .detail-panel .map-embed,
+  .detail-panel .detail-actions {
+    grid-column: 1 / -1;
+  }
+}
+
 /* Tablet / iPad */
 @media (max-width: 920px) {
   .detail-grid { grid-template-columns: 1fr; gap: 20px; }
