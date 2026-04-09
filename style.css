@@ -1073,6 +1073,8 @@ a { text-decoration: none; }
   box-shadow: 0 4px 24px rgba(0,0,0,0.07);
   position: sticky;
   top: 72px;
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 14px;
