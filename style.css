@@ -1,3 +1,215 @@
+
+
+Pasted code.html
+File
+with this, i want the image caroseul to be above the "lease information" text block, can you explain why now the image slider and carosel is below all of the text? even though in the code it is located above?
+
+  
+
+
+
+
+Pasted code(1).css
+File
+
+I found the issue.
+
+At the bottom of your CSS, you actually override your original layout. Around lines 1343–1369 you change the page from a two-column layout to a single-column layout and then force the info panel above the gallery. 
+
+
+If what you want is:
+
+[ Image Carousel ]
+---------------------------------
+Property Title
+Price
+Description
+Lease Information
+Tags
+Map
+Buttons
+then you should remove the two-column layout entirely and make everything stack vertically.
+
+Replace this entire section:
+/* ===== DETAIL PAGE v2 — TWO COLUMN ===== */
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 28px;
+    max-width: 1280px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.detail-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.detail-panel {
+    background: var(--card);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 26px;
+    box-shadow: 0 4px 24px rgba(0,0,0,.07);
+    position: sticky;
+    top: 72px;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+with this:
+
+.detail-grid {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 24px;
+}
+
+.detail-gallery {
+    order: 1;
+}
+
+.detail-panel {
+    order: 2;
+
+    background: var(--card);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 26px;
+    box-shadow: 0 4px 24px rgba(0,0,0,.07);
+
+    position: static;
+    max-height: none;
+    overflow: visible;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+Then delete this entire media query:
+
+@media (min-width: 921px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-panel {
+        order: -1;
+        position: static;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        column-gap: 48px;
+        row-gap: 12px;
+        align-items: start;
+    }
+
+    .detail-panel .detail-panel-desc {
+        grid-column: 2;
+        grid-row: 1 / span 5;
+    }
+
+    .detail-panel > .detail-divider:first-of-type {
+        display: none;
+    }
+
+    .detail-panel > .detail-divider,
+    .detail-panel .detail-tags,
+    .detail-panel .map-embed,
+    .detail-panel .detail-actions {
+        grid-column: 1 / -1;
+    }
+}
+This section is what's rearranging everything on desktop. 
+
+
+After these changes, the page will always display in this order:
+
+Back button
+
+Image carousel
+
+Property information
+
+Description
+
+Lease information
+
+Amenities
+
+Map
+
+Contact buttons
+
+This will be consistent on desktop, tablet, and mobile.
+
+
+give me the entire code again with the changes fixed
+
+I can absolutely do that, but I can't paste all 1,465 lines of your CSS back into a single ChatGPT response because it exceeds the maximum response length.
+
+The changes require returning essentially the entire style.css, which is too large to fit in one message. 
+
+
+The best way is for me to generate a complete updated style.css file that you can download and replace your existing one with. That way you'll get:
+
+✅ the full file (all 1,465+ lines)
+
+✅ the carousel always above the property information
+
+✅ desktop, tablet, and mobile layouts fixed
+
+✅ no missing sections or truncated code
+
+It's much safer than trying to paste thousands of lines into chat, where the response would be cut off.
+
+
+ok do that 
+
+Done! I created an updated CSS file with the desktop layout override removed and the detail page changed to a single vertical flow so the image carousel stays above the property information.
+
+You can download it here:
+
+📄 style_fixed.css
+
+Replace your current style.css with this file (or rename it to style.css).
+
+The resulting order on the property pages will be:
+
+Back button
+
+Image carousel
+
+Availability
+
+Address
+
+Price
+
+Description (including lease information)
+
+Amenities
+
+Map
+
+Contact buttons
+
+If your goal instead is to keep the desktop two-column layout but have the carousel span the full width above both columns (a layout used by Zillow, Airbnb, etc.), I can make that version too. Many people find it looks more professional than stacking everything into one column. 
+
+
+style_fixed.css
+Code
+
+
+style_fixed.css
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Raleway:wght@700;800;900&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -1045,39 +1257,26 @@ a { text-decoration: none; }
 }
 
 .detail-grid {
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  gap: 28px;
-  max-width: 1280px;
-  margin: 0 auto;
-  align-items: start;
+    display:flex;
+    flex-direction:column;
+    max-width:1100px;
+    margin:0 auto;
+    gap:24px;
 }
-
-.detail-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.detail-nav-row {
-  display: flex;
-  align-items: center;
-}
-
-/* Right sticky info panel */
-.detail-panel {
-  background: var(--card);
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  padding: 26px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-  position: sticky;
-  top: 72px;
-  max-height: calc(100vh - 90px);
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.detail-gallery{order:1;display:flex;flex-direction:column;gap:14px;}
+.detail-panel{
+    order:2;
+    background:var(--card);
+    border-radius:16px;
+    border:1px solid var(--border);
+    padding:26px;
+    box-shadow:0 4px 24px rgba(0,0,0,.07);
+    position:static;
+    max-height:none;
+    overflow:visible;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
 }
 
 .detail-panel-title {
@@ -1339,36 +1538,6 @@ a { text-decoration: none; }
 .lightbox-close:hover { background: rgba(255,255,255,0.22); }
 
 /* ===== RESPONSIVE ===== */
-
-/* Desktop: info panel on top, carousel below */
-@media (min-width: 921px) {
-  .detail-grid {
-    grid-template-columns: 1fr;
-  }
-  .detail-panel {
-    order: -1;
-    position: static;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    column-gap: 48px;
-    row-gap: 12px;
-    align-items: start;
-  }
-  .detail-panel .detail-panel-desc {
-    grid-column: 2;
-    grid-row: 1 / span 5;
-    align-self: start;
-  }
-  .detail-panel > .detail-divider:first-of-type {
-    display: none;
-  }
-  .detail-panel > .detail-divider,
-  .detail-panel .detail-tags,
-  .detail-panel .map-embed,
-  .detail-panel .detail-actions {
-    grid-column: 1 / -1;
-  }
-}
 
 /* Tablet / iPad */
 @media (max-width: 920px) {
